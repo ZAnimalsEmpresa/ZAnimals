@@ -6,16 +6,16 @@
             "id": "24c6710f-2a7c-47db-a5a1-9ba3082eaad7",
             "actions": [
                 {
-                    "name": "MoveCamera",
+                    "name": "HandleCameraMove",
                     "type": "Value",
                     "id": "17779852-4e47-4555-80d7-726d8d97cad7",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Vector3",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
-                    "name": "RotateCamera",
+                    "name": "HandleCameraRotate",
                     "type": "Value",
                     "id": "416634d1-cc87-46a7-afce-6dee44339844",
                     "expectedControlType": "Quaternion",
@@ -27,14 +27,91 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "cc4e64e0-1d04-4ee4-a0a3-486343e1235e",
+                    "id": "30e8a06e-7a71-47e6-8a93-a5bf9be367fa",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "3D Vector",
+                    "id": "cfc99571-75ae-4af3-80e2-b0f5dec871d8",
+                    "path": "3DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "cbb817b8-9be7-48ad-9da9-f7237050bf2f",
                     "path": "",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Default",
-                    "action": "MoveCamera",
+                    "groups": "",
+                    "action": "HandleCameraMove",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "97a3754c-04bc-4372-a01f-2761793c4d7d",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "6a2b91b8-1f2f-487f-9d89-21a77e25a97c",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "a8be1c1c-010e-4fb6-a641-d0f6b897144b",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "forward",
+                    "id": "a76456ce-7ec7-413b-9cf2-150c5b3ae58d",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "backward",
+                    "id": "909e9710-661e-4dd9-8241-6105288651a8",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -43,7 +120,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Default",
-                    "action": "RotateCamera",
+                    "action": "HandleCameraRotate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -54,7 +131,18 @@
         {
             "name": "Default",
             "bindingGroup": "Default",
-            "devices": []
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
         }
     ]
 }
