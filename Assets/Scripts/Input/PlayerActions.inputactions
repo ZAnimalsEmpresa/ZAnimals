@@ -16,12 +16,21 @@
                 },
                 {
                     "name": "HandleCameraRotate",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "416634d1-cc87-46a7-afce-6dee44339844",
-                    "expectedControlType": "Quaternion",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "HandleCameraZoom",
+                    "type": "PassThrough",
+                    "id": "c2125d51-da79-46b6-acc2-29724aaa27c5",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -114,13 +123,46 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "1D Axis",
+                    "id": "a5a46128-dba6-4140-85cd-1933a87b0008",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraRotate",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "79462b2e-0f4f-4910-9335-c4b24efe65bf",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraRotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "74272fc2-85a0-4c67-a938-3af520d81ff1",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandleCameraRotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
-                    "id": "1a68c5ea-7c01-483a-9131-fef1d101de58",
-                    "path": "",
+                    "id": "22d28484-75ac-40c5-b124-f1242b60d33a",
+                    "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "Default",
-                    "action": "HandleCameraRotate",
+                    "action": "HandleCameraZoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -140,6 +182,11 @@
                 {
                     "devicePath": "<Gamepad>",
                     "isOptional": true,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
                     "isOR": false
                 }
             ]
