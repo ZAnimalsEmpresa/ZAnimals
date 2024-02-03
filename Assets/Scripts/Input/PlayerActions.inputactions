@@ -31,6 +31,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UnitDeploymentFirstSlot",
+                    "type": "Button",
+                    "id": "103b76dd-1dcd-423c-b9f0-5f09258ffaa9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UnitDeploymentSecondSlot",
+                    "type": "Button",
+                    "id": "3af50fd3-99b3-42fe-bf9a-7ec29a726e2e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UnitDeploymentThirdSlot",
+                    "type": "Button",
+                    "id": "60cf2b2d-ede6-4fd8-8640-13b4b4c6237b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -163,6 +190,39 @@
                     "processors": "",
                     "groups": "Default",
                     "action": "HandleCameraZoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2d760cc-50af-437d-b281-cf64dc2fd3d7",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UnitDeploymentFirstSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6e29067c-e02f-4bd5-a434-76bed49b8a13",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UnitDeploymentSecondSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "65826aa1-ee0e-473d-9990-19d5991e4ed6",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UnitDeploymentThirdSlot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

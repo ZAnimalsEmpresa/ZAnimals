@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 8998734790289246607}
   - component: {fileID: 4387907860637480314}
   - component: {fileID: 9090679907113263329}
+  - component: {fileID: 7097474678227377853}
+  - component: {fileID: 3424321198009413478}
   - component: {fileID: 4078538431970102826}
+  - component: {fileID: 949422737177949693}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -101,6 +104,54 @@ MonoBehaviour:
   _cameraRotateSpeed: 89.3
   _fieldOfViewMin: 5
   _fieldOfViewMax: 50
+--- !u!114 &7097474678227377853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573666229448036032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80dc655a07a152748a5875394684b855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _unitFirstSlot: {fileID: 1667675658993755951, guid: bdd2d89adb1336541b4ee55e3d940f09, type: 3}
+  _unitSecondSlot: {fileID: 1667675658993755951, guid: bdd2d89adb1336541b4ee55e3d940f09, type: 3}
+  _unitThirdSlot: {fileID: 1667675658993755951, guid: bdd2d89adb1336541b4ee55e3d940f09, type: 3}
+--- !u!114 &3424321198009413478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573666229448036032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6781b467167175a45a272c3787c44109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 9d28b82cc365cee4ea921d41b26dc102, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7097474678227377853}
+        m_TargetAssemblyTypeName: ManagementUnitController, Assembly-CSharp
+        m_MethodName: SetSpawnPoint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _debugValue: {fileID: 0}
 --- !u!114 &4078538431970102826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,26 +213,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9090679907113263329}
         m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
-        m_MethodName: OnHandleCameraScrollEdge
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 66f76ba2-b325-4dda-9bcd-c3a429573f9b
-    m_ActionName: UnitManagement/HandleCameraScrollEdge[/Mouse/delta/up,/Mouse/delta/down,/Mouse/delta/left,/Mouse/delta/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 62b9c4f2-8b21-4517-a51a-542744dccf61
-    m_ActionName: UnitManagement/HandleCameraMovementDragPan[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 9090679907113263329}
-        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
         m_MethodName: OnHandleCameraZoom
         m_Mode: 0
         m_Arguments:
@@ -194,8 +225,79 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c2125d51-da79-46b6-acc2-29724aaa27c5
     m_ActionName: UnitManagement/HandleCameraZoom[/Mouse/scroll/y]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7097474678227377853}
+        m_TargetAssemblyTypeName: ManagementUnitController, Assembly-CSharp
+        m_MethodName: OnUnitDeplymentFirstSlot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 103b76dd-1dcd-423c-b9f0-5f09258ffaa9
+    m_ActionName: UnitManagement/UnitDeploymentFirstSlot[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7097474678227377853}
+        m_TargetAssemblyTypeName: ManagementUnitController, Assembly-CSharp
+        m_MethodName: OnUnitDeplymentSecondSlot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3af50fd3-99b3-42fe-bf9a-7ec29a726e2e
+    m_ActionName: UnitManagement/UnitDeploymentSecondSlot[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7097474678227377853}
+        m_TargetAssemblyTypeName: ManagementUnitController, Assembly-CSharp
+        m_MethodName: OnUnitDeplymentThirdSlot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 60cf2b2d-ede6-4fd8-8640-13b4b4c6237b
+    m_ActionName: UnitManagement/UnitDeploymentThirdSlot[/Keyboard/3]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: UnitManagement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!136 &949422737177949693
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573666229448036032}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

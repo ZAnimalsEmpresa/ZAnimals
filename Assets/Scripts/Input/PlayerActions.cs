@@ -53,6 +53,33 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UnitDeploymentFirstSlot"",
+                    ""type"": ""Button"",
+                    ""id"": ""103b76dd-1dcd-423c-b9f0-5f09258ffaa9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UnitDeploymentSecondSlot"",
+                    ""type"": ""Button"",
+                    ""id"": ""3af50fd3-99b3-42fe-bf9a-7ec29a726e2e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UnitDeploymentThirdSlot"",
+                    ""type"": ""Button"",
+                    ""id"": ""60cf2b2d-ede6-4fd8-8640-13b4b4c6237b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -187,6 +214,39 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""HandleCameraZoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e2d760cc-50af-437d-b281-cf64dc2fd3d7"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UnitDeploymentFirstSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6e29067c-e02f-4bd5-a434-76bed49b8a13"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UnitDeploymentSecondSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65826aa1-ee0e-473d-9990-19d5991e4ed6"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UnitDeploymentThirdSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -220,6 +280,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_UnitManagement_HandleCameraMove = m_UnitManagement.FindAction("HandleCameraMove", throwIfNotFound: true);
         m_UnitManagement_HandleCameraRotate = m_UnitManagement.FindAction("HandleCameraRotate", throwIfNotFound: true);
         m_UnitManagement_HandleCameraZoom = m_UnitManagement.FindAction("HandleCameraZoom", throwIfNotFound: true);
+        m_UnitManagement_UnitDeploymentFirstSlot = m_UnitManagement.FindAction("UnitDeploymentFirstSlot", throwIfNotFound: true);
+        m_UnitManagement_UnitDeploymentSecondSlot = m_UnitManagement.FindAction("UnitDeploymentSecondSlot", throwIfNotFound: true);
+        m_UnitManagement_UnitDeploymentThirdSlot = m_UnitManagement.FindAction("UnitDeploymentThirdSlot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -284,6 +347,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_UnitManagement_HandleCameraMove;
     private readonly InputAction m_UnitManagement_HandleCameraRotate;
     private readonly InputAction m_UnitManagement_HandleCameraZoom;
+    private readonly InputAction m_UnitManagement_UnitDeploymentFirstSlot;
+    private readonly InputAction m_UnitManagement_UnitDeploymentSecondSlot;
+    private readonly InputAction m_UnitManagement_UnitDeploymentThirdSlot;
     public struct UnitManagementActions
     {
         private @PlayerActions m_Wrapper;
@@ -291,6 +357,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         public InputAction @HandleCameraMove => m_Wrapper.m_UnitManagement_HandleCameraMove;
         public InputAction @HandleCameraRotate => m_Wrapper.m_UnitManagement_HandleCameraRotate;
         public InputAction @HandleCameraZoom => m_Wrapper.m_UnitManagement_HandleCameraZoom;
+        public InputAction @UnitDeploymentFirstSlot => m_Wrapper.m_UnitManagement_UnitDeploymentFirstSlot;
+        public InputAction @UnitDeploymentSecondSlot => m_Wrapper.m_UnitManagement_UnitDeploymentSecondSlot;
+        public InputAction @UnitDeploymentThirdSlot => m_Wrapper.m_UnitManagement_UnitDeploymentThirdSlot;
         public InputActionMap Get() { return m_Wrapper.m_UnitManagement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -309,6 +378,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @HandleCameraZoom.started += instance.OnHandleCameraZoom;
             @HandleCameraZoom.performed += instance.OnHandleCameraZoom;
             @HandleCameraZoom.canceled += instance.OnHandleCameraZoom;
+            @UnitDeploymentFirstSlot.started += instance.OnUnitDeploymentFirstSlot;
+            @UnitDeploymentFirstSlot.performed += instance.OnUnitDeploymentFirstSlot;
+            @UnitDeploymentFirstSlot.canceled += instance.OnUnitDeploymentFirstSlot;
+            @UnitDeploymentSecondSlot.started += instance.OnUnitDeploymentSecondSlot;
+            @UnitDeploymentSecondSlot.performed += instance.OnUnitDeploymentSecondSlot;
+            @UnitDeploymentSecondSlot.canceled += instance.OnUnitDeploymentSecondSlot;
+            @UnitDeploymentThirdSlot.started += instance.OnUnitDeploymentThirdSlot;
+            @UnitDeploymentThirdSlot.performed += instance.OnUnitDeploymentThirdSlot;
+            @UnitDeploymentThirdSlot.canceled += instance.OnUnitDeploymentThirdSlot;
         }
 
         private void UnregisterCallbacks(IUnitManagementActions instance)
@@ -322,6 +400,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @HandleCameraZoom.started -= instance.OnHandleCameraZoom;
             @HandleCameraZoom.performed -= instance.OnHandleCameraZoom;
             @HandleCameraZoom.canceled -= instance.OnHandleCameraZoom;
+            @UnitDeploymentFirstSlot.started -= instance.OnUnitDeploymentFirstSlot;
+            @UnitDeploymentFirstSlot.performed -= instance.OnUnitDeploymentFirstSlot;
+            @UnitDeploymentFirstSlot.canceled -= instance.OnUnitDeploymentFirstSlot;
+            @UnitDeploymentSecondSlot.started -= instance.OnUnitDeploymentSecondSlot;
+            @UnitDeploymentSecondSlot.performed -= instance.OnUnitDeploymentSecondSlot;
+            @UnitDeploymentSecondSlot.canceled -= instance.OnUnitDeploymentSecondSlot;
+            @UnitDeploymentThirdSlot.started -= instance.OnUnitDeploymentThirdSlot;
+            @UnitDeploymentThirdSlot.performed -= instance.OnUnitDeploymentThirdSlot;
+            @UnitDeploymentThirdSlot.canceled -= instance.OnUnitDeploymentThirdSlot;
         }
 
         public void RemoveCallbacks(IUnitManagementActions instance)
@@ -353,5 +440,8 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnHandleCameraMove(InputAction.CallbackContext context);
         void OnHandleCameraRotate(InputAction.CallbackContext context);
         void OnHandleCameraZoom(InputAction.CallbackContext context);
+        void OnUnitDeploymentFirstSlot(InputAction.CallbackContext context);
+        void OnUnitDeploymentSecondSlot(InputAction.CallbackContext context);
+        void OnUnitDeploymentThirdSlot(InputAction.CallbackContext context);
     }
 }
