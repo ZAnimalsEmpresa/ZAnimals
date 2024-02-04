@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestBasicEnemyUnit
   m_EditorClassIdentifier: 
   unitSize: 0
-  unitFaction: 0
+  unitFaction: 1
   cost: 0
   reward: 50
   initialLife: 50
