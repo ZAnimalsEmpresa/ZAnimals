@@ -33,23 +33,38 @@ public class TestAllyUnitBehavior : MonoBehaviour
             //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movementDirection), rotationSpeed * Time.deltaTime);
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         print("Entra oncollision");
-        if (collision.gameObject.CompareTag("Enemy"))
+
+        if (other.gameObject.CompareTag("Enemy"))
         {
             print("Entra if");
             //Esta siempre atacando, no cada 1 seg como deberia
-            InvokeRepeating(nameof(attack), 0, 1f * Time.deltaTime);   
+            InvokeRepeating(nameof(DealDamage), 0, 1f * Time.deltaTime);
         }
     }
 
-    public void attack()
+    public void DealDamage(GameObject target)
     {
-        if (currentEnemyLife>0)
+        if (currentEnemyLife > 0)
         {
             currentEnemyLife -= basicUnitAlly.attack;
             print("Enemigo Vida Actual: " + currentEnemyLife);
         }
+        /*
+         var atm = target.GetComponent<AttributesManager>();
+         if(atm!=null)
+         {
+            atm.TakeDamage(attack);
+         }
+         */
     }
+
+    public void TakeDamage(int amount)
+    {
+        //basicUnitAlly.currentLife -= amount;
+    }
+
 }
