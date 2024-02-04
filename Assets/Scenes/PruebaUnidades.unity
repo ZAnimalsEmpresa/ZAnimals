@@ -291,6 +291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 335834199}
+  - component: {fileID: 335834200}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -316,6 +317,20 @@ Transform:
   - {fileID: 1147084342}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &335834200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335834197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01afb2b3539958949b860b874283e47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicUnitAlly: {fileID: 1404977255}
+  basicUnitEnemy: {fileID: 1147084343}
 --- !u!1 &336085492
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +437,7 @@ GameObject:
   - component: {fileID: 419388289}
   m_Layer: 0
   m_Name: Collision
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -619,9 +634,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1147084342}
   - component: {fileID: 1147084341}
+  - component: {fileID: 1147084343}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -670,6 +686,19 @@ Transform:
   - {fileID: 182316844}
   m_Father: {fileID: 335834199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1147084343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147084340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e422168ed56c54d4f88eb5ea9c1a561f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicUnitEnemy: {fileID: 11400000, guid: 8c656467339a9ea43b6f7f4c529b0048, type: 2}
 --- !u!1 &1404977252
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +712,7 @@ GameObject:
   - component: {fileID: 1404977255}
   m_Layer: 0
   m_Name: Ally
-  m_TagString: Ally
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,8 +774,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basicUnitAlly: {fileID: 11400000, guid: 094ef09f31187ad4dbacf4f358ea162e, type: 2}
-  basicUnitEnemy: {fileID: 11400000, guid: 8c656467339a9ea43b6f7f4c529b0048, type: 2}
-  enemigo: {fileID: 1147084340}
 --- !u!1 &1444769711
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +788,7 @@ GameObject:
   - component: {fileID: 1444769713}
   m_Layer: 0
   m_Name: Collision
-  m_TagString: Untagged
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
