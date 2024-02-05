@@ -227,6 +227,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "TurretController",
+            "id": "a38414f3-d199-4bdf-81af-9527685346af",
+            "actions": [
+                {
+                    "name": "Sight",
+                    "type": "Value",
+                    "id": "0288d716-f9bf-48d3-ab70-db21c6ef1a1e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "3fde6cf2-362a-42b9-8ad4-72e8766fd803",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7d61c2a7-4485-41ae-a34a-c470d7a6bca6",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fbfab619-71f3-4771-8330-d05dc7219626",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

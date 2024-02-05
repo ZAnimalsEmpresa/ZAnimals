@@ -249,6 +249,54 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""TurretController"",
+            ""id"": ""a38414f3-d199-4bdf-81af-9527685346af"",
+            ""actions"": [
+                {
+                    ""name"": ""Sight"",
+                    ""type"": ""Value"",
+                    ""id"": ""0288d716-f9bf-48d3-ab70-db21c6ef1a1e"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""3fde6cf2-362a-42b9-8ad4-72e8766fd803"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""7d61c2a7-4485-41ae-a34a-c470d7a6bca6"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fbfab619-71f3-4771-8330-d05dc7219626"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -283,6 +331,10 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_UnitManagement_UnitDeploymentFirstSlot = m_UnitManagement.FindAction("UnitDeploymentFirstSlot", throwIfNotFound: true);
         m_UnitManagement_UnitDeploymentSecondSlot = m_UnitManagement.FindAction("UnitDeploymentSecondSlot", throwIfNotFound: true);
         m_UnitManagement_UnitDeploymentThirdSlot = m_UnitManagement.FindAction("UnitDeploymentThirdSlot", throwIfNotFound: true);
+        // TurretController
+        m_TurretController = asset.FindActionMap("TurretController", throwIfNotFound: true);
+        m_TurretController_Sight = m_TurretController.FindAction("Sight", throwIfNotFound: true);
+        m_TurretController_Shoot = m_TurretController.FindAction("Shoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -426,6 +478,60 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         }
     }
     public UnitManagementActions @UnitManagement => new UnitManagementActions(this);
+
+    // TurretController
+    private readonly InputActionMap m_TurretController;
+    private List<ITurretControllerActions> m_TurretControllerActionsCallbackInterfaces = new List<ITurretControllerActions>();
+    private readonly InputAction m_TurretController_Sight;
+    private readonly InputAction m_TurretController_Shoot;
+    public struct TurretControllerActions
+    {
+        private @PlayerActions m_Wrapper;
+        public TurretControllerActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Sight => m_Wrapper.m_TurretController_Sight;
+        public InputAction @Shoot => m_Wrapper.m_TurretController_Shoot;
+        public InputActionMap Get() { return m_Wrapper.m_TurretController; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(TurretControllerActions set) { return set.Get(); }
+        public void AddCallbacks(ITurretControllerActions instance)
+        {
+            if (instance == null || m_Wrapper.m_TurretControllerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_TurretControllerActionsCallbackInterfaces.Add(instance);
+            @Sight.started += instance.OnSight;
+            @Sight.performed += instance.OnSight;
+            @Sight.canceled += instance.OnSight;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
+        }
+
+        private void UnregisterCallbacks(ITurretControllerActions instance)
+        {
+            @Sight.started -= instance.OnSight;
+            @Sight.performed -= instance.OnSight;
+            @Sight.canceled -= instance.OnSight;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
+        }
+
+        public void RemoveCallbacks(ITurretControllerActions instance)
+        {
+            if (m_Wrapper.m_TurretControllerActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ITurretControllerActions instance)
+        {
+            foreach (var item in m_Wrapper.m_TurretControllerActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_TurretControllerActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public TurretControllerActions @TurretController => new TurretControllerActions(this);
     private int m_DefaultSchemeIndex = -1;
     public InputControlScheme DefaultScheme
     {
@@ -443,5 +549,10 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnUnitDeploymentFirstSlot(InputAction.CallbackContext context);
         void OnUnitDeploymentSecondSlot(InputAction.CallbackContext context);
         void OnUnitDeploymentThirdSlot(InputAction.CallbackContext context);
+    }
+    public interface ITurretControllerActions
+    {
+        void OnSight(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
     }
 }
