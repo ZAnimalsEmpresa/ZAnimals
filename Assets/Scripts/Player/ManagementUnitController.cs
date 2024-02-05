@@ -46,12 +46,11 @@ public class ManagementUnitController : MonoBehaviour
     public void SetSpawnPoint(GameObject spawnObject)
     {
         _currentSpawnPoint = spawnObject;
-        Debug.Log(_currentSpawnPoint);
     }
     private void DeployUnit(GameObject unit)
     {
         Vector3 sPoint = GetRandomPointInSquareCollider();
-        Instantiate(unit, sPoint, Quaternion.identity);
+        Instantiate(unit, _currentSpawnPoint.transform.position, Quaternion.identity);
         //Instantiate(unit, _currentSpawnPoint.transform.position,Quaternion.identity);
     }
     // Method to get a random point within the collider's bounds

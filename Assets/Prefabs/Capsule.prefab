@@ -53,7 +53,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8573666229448036032}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80dc655a07a152748a5875394684b855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unitFirstSlot: {fileID: 1667675658993755951, guid: bdd2d89adb1336541b4ee55e3d940f09, type: 3}
+  _unitFirstSlot: {fileID: 9038790918073393320, guid: fdf74b21efafc7e43a44b32e6bd0cbc4, type: 3}
   _unitSecondSlot: {fileID: 1667675658993755951, guid: bdd2d89adb1336541b4ee55e3d940f09, type: 3}
-  _unitThirdSlot: {fileID: 1667675658993755951, guid: bdd2d89adb1336541b4ee55e3d940f09, type: 3}
+  _unitThirdSlot: {fileID: 9038790918073393320, guid: fdf74b21efafc7e43a44b32e6bd0cbc4, type: 3}
 --- !u!114 &3424321198009413478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +273,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 60cf2b2d-ede6-4fd8-8640-13b4b4c6237b
     m_ActionName: UnitManagement/UnitDeploymentThirdSlot[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0288d716-f9bf-48d3-ab70-db21c6ef1a1e
+    m_ActionName: TurretController/Sight[/Mouse/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3fde6cf2-362a-42b9-8ad4-72e8766fd803
+    m_ActionName: TurretController/Shoot[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: UnitManagement
@@ -293,7 +301,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
