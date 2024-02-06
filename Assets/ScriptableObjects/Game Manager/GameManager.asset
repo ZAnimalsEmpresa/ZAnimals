@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce09fa6c69d48341b0bc93bf3c6ff8e, type: 3}
   m_Name: GameManager
   m_EditorClassIdentifier: 
-  currentState: {fileID: 0}
-  gameStateChanged: {fileID: 0}
+  currentState: {fileID: 11400000, guid: 2cf8a0c008a2e674fbfaba770d7cb367, type: 2}
+  gameStateChanged: {fileID: 11400000, guid: e176d3e0361faf0429127502fb6768dc, type: 2}
