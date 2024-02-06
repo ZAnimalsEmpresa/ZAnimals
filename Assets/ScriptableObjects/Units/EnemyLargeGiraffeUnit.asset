@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78cbb0a5bf068894a8a7b5c7fd6db079, type: 3}
+  m_Name: EnemyLargeGiraffeUnit
+  m_EditorClassIdentifier: 
+  unitSize: 2
+  unitFaction: 1
+  unitSpecialSkill: 0
+  unitAttackType: 0
+  cost: 0
+  reward: 500
+  initialLife: 1000
+  currentLife: 1000
+  attack: 30
+  rangeAttack: 1
+  rateFire: 1
+  speedMovement: 1

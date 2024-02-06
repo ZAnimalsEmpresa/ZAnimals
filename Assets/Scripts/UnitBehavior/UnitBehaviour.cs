@@ -25,7 +25,7 @@ public class UnitBehaviour : MonoBehaviour
          
     }
 
-    public void TakeDamage(int amount, UnitSO unit)
+    public void TakeDamage(double amount, UnitSO unit)
     {
         print("Entra takedamage");
         unit.currentLife -= amount;
