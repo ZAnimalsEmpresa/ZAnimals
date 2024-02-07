@@ -1,38 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TestEnemyUnitBehavior : MonoBehaviour
 {
     public UnitSO basicUnitEnemy;
-    float speedEnemy;
-    int currentLife;
 
-    // Start is called before the first frame update
-    void Start()
+    UnitBehaviour UnitBH;
+
+    private void OnTriggerEnter(Collider other)
     {
-        currentLife = basicUnitEnemy.currentLife;
-        print("Enemigo Vida Inicial: " +currentLife);
+        Debug.Log(other.name);
+        print("Entra oncollisionEnemy");
+
+        if (other.gameObject.CompareTag("Ally"))
+        {
+            print("Entra if");
+            //Esta siempre atacando, no cada 1 seg como deberia
+            //InvokeRepeating(nameof(UnitBH.DealDamage(other), 0, 1f * Time.deltaTime);
+            UnitBH.DealDamage(other.GetComponent<TestAllyUnitBehavior>().gameObject);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Movimiento
-        /*
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        Vector3 movementDirection = new Vector3(horizontalInput,0,verticalInput);
-        movementDirection.Normalize();
-        speedEnemy = basicUnitEnemy.speedMovement;
-        transform.position = transform.position + movementDirection * speedEnemy * Time.deltaTime;
-        */
-    }
-
-    /*public void AttackMe (int attack)
-    {
-        currentLife -= attack;
-        print("Aliado Ataque: " + attack);
-        print("Enemigo Vida Actual: " + currentLife);
-    }*/
 }
