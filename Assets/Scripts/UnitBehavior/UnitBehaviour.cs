@@ -28,8 +28,8 @@ public class UnitBehaviour : MonoBehaviour
     public void TakeDamage(double amount, UnitSO unit)
     {
         print("Entra takedamage");
-        unit.currentLife -= amount;
-        print($"Vida Actual: {unit.unitFaction} = {unit.currentLife}");
+        unit.life -= amount;
+        print($"Vida Actual: {unit.unitFaction} = {unit.life}");
     }
 
 }
