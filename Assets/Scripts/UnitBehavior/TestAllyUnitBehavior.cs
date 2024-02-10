@@ -7,7 +7,7 @@ public class TestAllyUnitBehavior : MonoBehaviour
 {
     public UnitSO basicUnitAlly;
 
-    UnitBehaviour UnitBH;
+    //UnitBehaviour UnitBH;
 
     // Update is called once per frame
     void Update()
@@ -30,7 +30,7 @@ public class TestAllyUnitBehavior : MonoBehaviour
             print("Entra if");
             //Esta siempre atacando, no cada 1 seg como deberia
             //InvokeRepeating(nameof(UnitBH.DealDamage), 0, 1f * Time.deltaTime);
-            UnitBH.DealDamage(other.GetComponent<TestEnemyUnitBehavior>().gameObject);
+            //UnitBH.DealDamage(other.GetComponent<TestEnemyUnitBehavior>().gameObject);
         }
     }
 }
