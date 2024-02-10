@@ -7,7 +7,7 @@ public class TestEnemyUnitBehavior : MonoBehaviour
 {
     public UnitSO basicUnitEnemy;
 
-    UnitBehaviour UnitBH;
+    //UnitBehaviour UnitBH;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,7 +19,7 @@ public class TestEnemyUnitBehavior : MonoBehaviour
             print("Entra if");
             //Esta siempre atacando, no cada 1 seg como deberia
             //InvokeRepeating(nameof(UnitBH.DealDamage(other), 0, 1f * Time.deltaTime);
-            UnitBH.DealDamage(other.GetComponent<TestAllyUnitBehavior>().gameObject);
+            //UnitBH.DealDamage(other.GetComponent<TestAllyUnitBehavior>().gameObject);
         }
     }
 }
