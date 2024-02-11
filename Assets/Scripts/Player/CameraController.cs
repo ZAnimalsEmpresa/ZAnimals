@@ -23,9 +23,11 @@ public class CameraController : MonoBehaviour
     private float _rotateInput;
     private Vector3 _moveDir = Vector3.zero;
 
+
     private void Start()
     {
         _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        
     }
 
     private void Update()
