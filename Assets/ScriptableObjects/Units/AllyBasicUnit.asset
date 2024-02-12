@@ -19,7 +19,7 @@ MonoBehaviour:
   cost: 100
   reward: 0
   life: 50
-  attack: 10
+  attack: 20
   rangeAttack: 2
   rateFire: 3
   speedMovement: 3

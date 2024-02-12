@@ -4,55 +4,38 @@ using UnityEngine;
 
 public class UnitStats : MonoBehaviour
 {
-    public UnitSO unitSO;
-    //[HideInInspector]
-    public unitSize unitSize;
+    [SerializeField]
+    private UnitSO _unitSO;
+    public HealthController healthController;
+
+    private unitSize _unitSize;
     public unitFaction unitFaction;
-    public unitSpecialSkill unitSpecialSkill;
-    public unitAttackType unitAttackType;
-    public int cost;
-    public int reward;
-    public double life;
-    public double attack;
+    private unitSpecialSkill _unitSpecialSkill;
+    private unitAttackType _unitAttackType;
+    private int _cost;
+    private int _reward;
+    private double _life;
+    public double attackValue;
     public float rangeAttack;
-    public float rateFire;
-    public float speedMovement;
-    public string description;
+    private float _rateFire;
+    private float _speedMovement;
 
     public double currentLife;
-    public GameObject targetUnitStats;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentLife = unitSO.life;
-        Debug.Log($"life properties {this}: " + unitSO.life);
-        Debug.Log($"currentlife this {this}: "+ currentLife);
-    }
-        
-    public void DealDamage(GameObject target)
-    {
-        targetUnitStats = target;
-        if (target != null)
-        {
-            TakeDamage(target);
-        }
-    }
-
-    public void TakeDamage(GameObject targetUnit)
-    {
-        if (currentLife > 0)
-        {
-            currentLife -= unitSO.attack;
-            Debug.Log($"Vida Actual: {unitSO.unitFaction} = {currentLife}");
-            if (currentLife <= 0)
-            {
-                Destroy(targetUnit.transform.parent.gameObject);
-            }
-        }
-        else
-        {
-            Destroy(targetUnit.transform.parent.gameObject);
-        }
+        currentLife = _unitSO.life;
+        healthController.maxHealth = currentLife;
+        _unitSize = _unitSO.unitSize;
+        unitFaction = _unitSO.unitFaction;
+        _unitSpecialSkill = _unitSO.unitSpecialSkill;
+        _unitAttackType = _unitSO.unitAttackType;
+        _cost = _unitSO.cost;
+        _reward = _unitSO.reward;
+        attackValue = _unitSO.attack;
+        rangeAttack = _unitSO.rangeAttack;
+        _rateFire = _unitSO.rateFire;
+        _speedMovement = _unitSO.speedMovement;
     }
 }

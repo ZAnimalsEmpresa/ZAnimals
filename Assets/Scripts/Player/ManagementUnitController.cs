@@ -49,7 +49,7 @@ public class ManagementUnitController : MonoBehaviour
     }
     private void DeployUnit(GameObject unit)
     {
-        Vector3 sPoint = GetRandomPointInSquareCollider();
+        //Vector3 sPoint = GetRandomPointInSquareCollider();
         Instantiate(unit, _currentSpawnPoint.transform.position, Quaternion.identity);
         //Instantiate(unit, _currentSpawnPoint.transform.position,Quaternion.identity);
     }
