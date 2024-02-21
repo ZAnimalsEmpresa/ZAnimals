@@ -12,6 +12,7 @@ public class UnitSO : ScriptableObject
     public int reward;
     public double life;
     public double attack;
+    public double poisonDamage;
     public float rangeAttack;
     public float rateFire;
     public float speedMovement;
@@ -25,4 +26,4 @@ public class UnitSO : ScriptableObject
 public enum unitFaction {Ally, Enemy}
 public enum unitSize {basic, medium, large, turret}
 public enum unitAttackType {melee, ranged}
-public enum unitSpecialSkill {None, HiddenAmongUnits, HiddenUnderground, TurretAttack, OnlyBaseAttack}
+public enum unitSpecialSkill {None, HiddenAmongUnits, HiddenUnderground, TurretAttack, OnlyBaseAttack, PoisonAttack}

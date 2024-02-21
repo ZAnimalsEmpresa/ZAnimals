@@ -16,6 +16,7 @@ public class UnitStats : MonoBehaviour
     private int _reward;
     private double _life;
     public double attackValue;
+    public double _poisonDamage;
     public float rangeAttack;
     private float _rateFire;
     private float _speedMovement;
@@ -34,6 +35,7 @@ public class UnitStats : MonoBehaviour
         _cost = _unitSO.cost;
         _reward = _unitSO.reward;
         attackValue = _unitSO.attack;
+        _poisonDamage = _unitSO.poisonDamage;
         rangeAttack = _unitSO.rangeAttack;
         _rateFire = _unitSO.rateFire;
         _speedMovement = _unitSO.speedMovement;
