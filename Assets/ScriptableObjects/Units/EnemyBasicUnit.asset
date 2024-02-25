@@ -18,9 +18,9 @@ MonoBehaviour:
   unitAttackType: 0
   cost: 0
   reward: 50
-  initialLife: 50
-  currentLife: 50
+  life: 50
   attack: 10
   rangeAttack: 1
   rateFire: 1
   speedMovement: 3
+  description: 

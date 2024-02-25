@@ -22,7 +22,7 @@ public class UnitSO : ScriptableObject
     //public enum speedMovement {slow, medium, fast}
 }
 
-public enum unitFaction {ally, enemy}
+public enum unitFaction {Ally, Enemy}
 public enum unitSize {basic, medium, large, turret}
 public enum unitAttackType {melee, ranged}
 public enum unitSpecialSkill {None, HiddenAmongUnits, HiddenUnderground, TurretAttack, OnlyBaseAttack}

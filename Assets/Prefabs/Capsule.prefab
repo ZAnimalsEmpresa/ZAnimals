@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _unitFirstSlot: {fileID: 9038790918073393320, guid: fdf74b21efafc7e43a44b32e6bd0cbc4, type: 3}
-  _unitSecondSlot: {fileID: 1667675658993755951, guid: bdd2d89adb1336541b4ee55e3d940f09, type: 3}
+  _unitSecondSlot: {fileID: 9038790918073393320, guid: fdf74b21efafc7e43a44b32e6bd0cbc4, type: 3}
   _unitThirdSlot: {fileID: 9038790918073393320, guid: fdf74b21efafc7e43a44b32e6bd0cbc4, type: 3}
 --- !u!114 &3424321198009413478
 MonoBehaviour:
