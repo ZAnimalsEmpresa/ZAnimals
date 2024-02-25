@@ -90,7 +90,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.0022580635
+        functionName: PlayFootSteps()
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 2f63a5041aee69f4c91b075170426415, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5577419
+        functionName: PlayFootSteps()
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 2f63a5041aee69f4c91b075170426415, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -119,7 +133,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.11967741
+        functionName: PlayDeath()
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 2f63a5041aee69f4c91b075170426415, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -148,7 +169,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.3477419
+        functionName: PlayAttackMelee()
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 2f63a5041aee69f4c91b075170426415, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

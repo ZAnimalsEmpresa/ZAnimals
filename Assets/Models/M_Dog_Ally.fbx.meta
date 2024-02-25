@@ -90,7 +90,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.28677416
+        functionName: PlayFootSteps()
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: e0170c759ca87d345b7ae900c93eda4e, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -119,7 +126,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.13017957
+        functionName: PlayDeath()
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: e0170c759ca87d345b7ae900c93eda4e, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -148,7 +162,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.53064513
+        functionName: PlayAttackMelee()
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: e0170c759ca87d345b7ae900c93eda4e, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
