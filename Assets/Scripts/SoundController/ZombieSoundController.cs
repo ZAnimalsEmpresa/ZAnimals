@@ -9,6 +9,9 @@ public class ZombieSoundController : MonoBehaviour
     //private FMOD.Studio.EventInstance attackWeapon;
     private FMOD.Studio.EventInstance attackMelee;
     private FMOD.Studio.EventInstance giraffeSpawn;
+    private FMOD.Studio.EventInstance giraffeFall;
+    private FMOD.Studio.EventInstance bomb;
+    private FMOD.Studio.EventInstance poison;
 
     private void PlayFootSteps()
     {
@@ -49,5 +52,29 @@ public class ZombieSoundController : MonoBehaviour
         giraffeSpawn.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         giraffeSpawn.start();
         giraffeSpawn.release();
+    }
+
+    private void PlayGiraffeFall()
+    {
+        giraffeFall = FMODUnity.RuntimeManager.CreateInstance("event:/Character/Zombie Giraffe Fall");
+        giraffeFall.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        giraffeFall.start();
+        giraffeFall.release();
+    }
+
+    private void PlayBomb()
+    {
+        bomb = FMODUnity.RuntimeManager.CreateInstance("event:/Weapons/Explosion");
+        bomb.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        bomb.start();
+        bomb.release();
+    }
+
+    private void PlayPoison()
+    {
+        poison = FMODUnity.RuntimeManager.CreateInstance("event:/Character/Zombie Attack Poison");
+        poison.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        poison.start();
+        poison.release();
     }
 }

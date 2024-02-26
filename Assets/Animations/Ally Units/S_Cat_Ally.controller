@@ -34,10 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: S_Cat_Ally_Walk
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: S_Cat_Ally_Attack
+    m_ConditionEvent: S_Cat_Ally_AttackWalk
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5775263357043587395}
@@ -245,14 +242,11 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: S_Cat_Ally_Walk
+  - m_ConditionMode: 2
+    m_ConditionEvent: S_Cat_Ally_AttackWalk
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: S_Cat_Ally_Point
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: S_Cat_Ally_Attack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1363967581932758520}
@@ -432,7 +426,7 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 1
+    m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: S_Cat_Ally_Attack
     m_Type: 4
@@ -451,6 +445,12 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: S_Cat_Ally_AttackWalk
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
@@ -474,7 +474,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: S_Cat_Ally_Walk
+    m_ConditionEvent: S_Cat_Ally_AttackWalk
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: S_Cat_Ally_Attack
@@ -746,9 +746,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: S_Cat_Ally_Point
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: S_Cat_Ally_Walk
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5775263357043587395}
   m_Solo: 0
@@ -945,7 +942,7 @@ AnimatorStateTransition:
     m_ConditionEvent: S_Cat_Ally_Walk
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: S_Cat_Ally_Attack
+    m_ConditionEvent: S_Cat_Ally_AttackWalk
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2298525963139463932}
@@ -969,11 +966,11 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: S_Cat_Ally_Walk
+  - m_ConditionMode: 2
+    m_ConditionEvent: S_Cat_Ally_Point
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: S_Cat_Ally_Attack
+    m_ConditionEvent: S_Cat_Ally_AttackWalk
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3075500338904257603}
