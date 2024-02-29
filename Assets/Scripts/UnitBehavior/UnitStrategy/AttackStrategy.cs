@@ -16,23 +16,26 @@ public class AttackStrategy : IUnitStrategy
         _enemyHealthController = enemy.GetComponent<HealthController>(); // Obtener el HealthController del enemigo
         _attackCooldown = attackCooldown;
         _lastAttackTime = Time.time - attackCooldown; // Initialise to allow first attack
+    }
 
+    public string GetNameStrategy()
+    {
+        return "AttackStrategy";
     }
 
     public void Execute()
     {
+        // Get the current time
+        float currentTime = Time.time;
 
-    // Get the current time
-    float currentTime = Time.time;
+        // Calculate time elapsed since last attack
+        float timeSinceLastAttack = currentTime - _lastAttackTime;
 
-    // Calculate time elapsed since last attack
-    float timeSinceLastAttack = currentTime - _lastAttackTime;
-    
-    if (timeSinceLastAttack >= _attackCooldown)
-        {
+        if (timeSinceLastAttack >= _attackCooldown)
+        {            
             // Carry out attack only if sufficient time has passed since last attack.
-            DealDamage();
-            _lastAttackTime = Time.time;
+            DealDamage();            
+            _lastAttackTime = Time.time;            
         }
     }
 
@@ -41,7 +44,7 @@ public class AttackStrategy : IUnitStrategy
         if (_enemyHealthController != null)
         {
             // Llamar al método TakeDamage del HealthController del enemigo
-            _enemyHealthController.TakeDamage(_currentUnit.GetComponent<UnitStats>().attackValue);
+            _enemyHealthController.TakeDamage(_currentUnit.GetComponent<UnitStats>().attackValue);            
         }
     }
 }

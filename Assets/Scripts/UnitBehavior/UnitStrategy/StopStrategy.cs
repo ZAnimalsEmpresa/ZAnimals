@@ -13,6 +13,12 @@ public class StopStrategy : IUnitStrategy
         _navMeshAgent = navMeshAgent;
         _isRunning = isRunning;
     }
+
+    public string GetNameStrategy()
+    {
+        return "StopStrategy";
+    }
+
     public void Execute()
     {
         _navMeshAgent.isStopped = _isRunning;
