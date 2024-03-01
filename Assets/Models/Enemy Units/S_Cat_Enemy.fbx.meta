@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dc4e5ef24215a9c4691f125cfa4752f7
+guid: 9a147491a53a35d4d981670472f03db8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Medio Aliado
-    second: {fileID: 2100000, guid: 1ffbdd6488cd12248bd1f6f1c22be295, type: 2}
+      name: Mini Enemigo
+    second: {fileID: 2100000, guid: ebc7fdec997acd84985bce73cfa60d57, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -67,11 +67,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Medium Ally Walk
-      takeName: Medium Ally Walk
-      internalID: 2733259276304556270
-      firstFrame: 1
-      lastFrame: 27.100002
+      name: Mini Enemy Walk
+      takeName: Mini Enemy Walk
+      internalID: -680037256002324431
+      firstFrame: 3
+      lastFrame: 57
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -90,17 +90,31 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.0022580635
+        functionName: PlayFootSteps
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5577419
+        functionName: PlayFootSteps
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Medium Ally Death
-      takeName: Medium Ally Death
-      internalID: -7107203623864664280
+      name: Mini Enemy Death
+      takeName: Mini Enemy Death
+      internalID: -9158585138587408433
       firstFrame: 1
-      lastFrame: 56
+      lastFrame: 84
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -119,17 +133,24 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.11967741
+        functionName: PlayDeath
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Medium Ally Attack
-      takeName: Medium Ally Attack
-      internalID: 8043511653882111522
+      name: Mini Enemy Attack
+      takeName: Mini Enemy Attack
+      internalID: -2392293701277802239
       firstFrame: 1
-      lastFrame: 42
+      lastFrame: 55
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -148,7 +169,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.3477419
+        functionName: PlayAttackMelee
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

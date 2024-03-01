@@ -1,0 +1,641 @@
+fileFormatVersion: 2
+guid: 7f9285e3132c2a142a91955214b6a9e3
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: T-Pose
+      takeName: T-Pose
+      internalID: -8312538846858333772
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mini Ally Walk
+      takeName: Mini Ally Walk
+      internalID: 6078770211841750368
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.34999996
+        functionName: PlayFootSteps
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.7790322
+        functionName: PlayFootSteps
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mini Ally Point Walk
+      takeName: Mini Ally Point Walk
+      internalID: 5192448540915051976
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mini Ally Death
+      takeName: Mini Ally Death
+      internalID: -4454765602996658628
+      firstFrame: 0
+      lastFrame: 62
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.02709677
+        functionName: PlayDeath
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mini Ally Attack Walk
+      takeName: Mini Ally Attack Walk
+      internalID: 6328669919012797578
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.045161285
+        functionName: PlayAttackWaeapon
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.29129028
+        functionName: PlayFootSteps
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8151612
+        functionName: PlayFootSteps
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Mini Ally Attack
+      takeName: Mini Ally Attack
+      internalID: -7948187566691555794
+      firstFrame: 0
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.16709676
+        functionName: PlayAttackWaeapon
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|T-Pose
+      takeName: Armature|T-Pose
+      internalID: 786504323170427181
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: S_Cat_Ally(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: S_Cat_Ally(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Hips
+      parentName: Armature
+      position: {x: -1.4779288e-14, y: -0.05189763, z: 0.5869352}
+      rotation: {x: -0.00000008724255, y: -0.7071067, z: -0.7071068, w: -0.000000025425269}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Spine
+      parentName: mixamorig:Hips
+      position: {x: 4.717162e-10, y: 0.10030103, z: 0.003124001}
+      rotation: {x: 0.015566022, y: -6.8043e-10, z: -0.0000000023610058, w: 0.9998789}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: mixamorig:Spine1
+      parentName: mixamorig:Spine
+      position: {x: -0, y: 0.117074974, z: 1.00808246e-14}
+      rotation: {x: -0, y: -1.4377388e-14, z: -1.3707785e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Spine2
+      parentName: mixamorig:Spine1
+      position: {x: -6.82121e-15, y: 0.133799, z: 0.000000002384202}
+      rotation: {x: -0.000000058673326, y: -5.6399333e-14, z: 4.3295232e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Neck
+      parentName: mixamorig:Spine2
+      position: {x: 1.8189894e-14, y: 0.15052406, z: 0.0000000047683946}
+      rotation: {x: -0.015565963, y: 6.8054373e-10, z: 0.0000000023609767, w: 0.9998789}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Head
+      parentName: mixamorig:Neck
+      position: {x: -6.559321e-10, y: 0.11610803, z: -0.004344003}
+      rotation: {x: -0, y: -4.263256e-14, z: 1.7347233e-17, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: Accesorio Gato Mini Aliado Low.001
+      parentName: mixamorig:Head
+      position: {x: -0.00000007776063, y: -1.2045475, z: -0.06317231}
+      rotation: {x: -0.7071069, y: 0.00000019949599, z: 0.0000001376787, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: mixamorig:Head_end
+      parentName: mixamorig:Head
+      position: {x: -0, y: 0.48733672, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftShoulder
+      parentName: mixamorig:Spine2
+      position: {x: 0.080802, y: 0.09228356, z: 0.0015518352}
+      rotation: {x: 0.54701287, y: 0.44847447, z: -0.5453593, w: 0.4497009}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000001}
+    - name: mixamorig:LeftArm
+      parentName: mixamorig:LeftShoulder
+      position: {x: -0.000000005289912, y: 0.16409202, z: -0.00000006854534}
+      rotation: {x: -0.09778741, y: -0.00040709972, z: 0.023742825, w: 0.99492407}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.9999999}
+    - name: mixamorig:LeftForeArm
+      parentName: mixamorig:LeftArm
+      position: {x: -0.0000000023841857, y: 0.24686883, z: -0.00000008739531}
+      rotation: {x: -0.00041864061, y: 0.00027393486, z: 0.016028645, w: 0.99987143}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: mixamorig:LeftHand
+      parentName: mixamorig:LeftForeArm
+      position: {x: 0.0000000032782554, y: 0.19727905, z: -0.00000008180737}
+      rotation: {x: 0.000098350036, y: -0.06629542, z: 0.0024675848, w: 0.997797}
+      scale: {x: 1.0000002, y: 1.0000008, z: 1.0000004}
+    - name: mixamorig:LeftHandThumb1
+      parentName: mixamorig:LeftHand
+      position: {x: 0.000000038146972, y: -0.000000057885124, z: 0.000000017285346}
+      rotation: {x: -0.060965303, y: -0.07552998, z: 0.44935662, w: -0.88806367}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000005}
+    - name: mixamorig:LeftHandThumb2
+      parentName: mixamorig:LeftHandThumb1
+      position: {x: -0.000000035762785, y: 0.055829465, z: 0.000000026226044}
+      rotation: {x: -0.010600529, y: 0.031464785, z: 0.040038314, w: 0.9986463}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: mixamorig:LeftHandThumb3
+      parentName: mixamorig:LeftHandThumb2
+      position: {x: 0.00000003159046, y: 0.064155065, z: -0.00000002592802}
+      rotation: {x: 0.030017868, y: -0.07589021, z: -0.009274521, w: 0.9966211}
+      scale: {x: 1.0000005, y: 1.0000015, z: 1.0000002}
+    - name: mixamorig:LeftHandThumb4
+      parentName: mixamorig:LeftHandThumb3
+      position: {x: -0.000000006556511, y: 0.045908783, z: 0.000000044703484}
+      rotation: {x: -0.018240117, y: 0.012005026, z: 0.057114307, w: 0.99812883}
+      scale: {x: 0.99999934, y: 0.99999934, z: 0.9999998}
+    - name: mixamorig:LeftHandThumb4_end
+      parentName: mixamorig:LeftHandThumb4
+      position: {x: -0, y: 0.031825744, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftHandIndex1
+      parentName: mixamorig:LeftHand
+      position: {x: 0.000000019073486, y: 0.049853735, z: 0.000000019073486}
+      rotation: {x: -0.013636701, y: 0.00047879654, z: -0.014415499, w: 0.99980295}
+      scale: {x: 1.0000004, y: 1, z: 1.0000002}
+    - name: mixamorig:LeftHandIndex2
+      parentName: mixamorig:LeftHandIndex1
+      position: {x: -0.0000000047683715, y: 0.09271477, z: 0.000000042915342}
+      rotation: {x: -0.009419521, y: -0.12376909, z: 0.0009849708, w: 0.9922658}
+      scale: {x: 1.0000002, y: 1.0000008, z: 0.9999997}
+    - name: mixamorig:LeftHandIndex2_end
+      parentName: mixamorig:LeftHandIndex2
+      position: {x: -0, y: 0.06709747, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Weapon
+      parentName: mixamorig:LeftForeArm
+      position: {x: -0.05667282, y: 0.34553397, z: 0.14584179}
+      rotation: {x: 0.029558593, y: 0.044574067, z: 0.7396381, w: -0.6708762}
+      scale: {x: 1.0000019, y: 1.0000007, z: 1.0000006}
+    - name: Arma Gato Mini Aliado Low
+      parentName: mixamorig:Weapon
+      position: {x: 0.9133088, y: 0.16199917, z: 0.75856847}
+      rotation: {x: 0.0028478664, y: 0.9985842, z: -0.00015145037, w: -0.05311809}
+      scale: {x: 99.99999, y: 100.000015, z: 100.00002}
+    - name: mixamorig:Weapon_end
+      parentName: mixamorig:Weapon
+      position: {x: -0, y: 0.049853705, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightShoulder
+      parentName: mixamorig:Spine2
+      position: {x: -0.08080193, y: 0.092283584, z: 0.0015518644}
+      rotation: {x: 0.547013, y: -0.44847432, z: 0.5453593, w: 0.44970086}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: mixamorig:RightArm
+      parentName: mixamorig:RightShoulder
+      position: {x: 0.0000000060349703, y: 0.16409199, z: -0.00000006899238}
+      rotation: {x: -0.097787425, y: 0.00040705502, z: -0.023742914, w: 0.99492407}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000007}
+    - name: mixamorig:RightForeArm
+      parentName: mixamorig:RightArm
+      position: {x: -0, y: 0.24686895, z: -0.000000011622905}
+      rotation: {x: -0.0004189684, y: -0.00027373523, z: -0.016028767, w: 0.9998715}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999997}
+    - name: mixamorig:RightHand
+      parentName: mixamorig:RightForeArm
+      position: {x: -0.000000005662441, y: 0.19727904, z: -0.0000000043213366}
+      rotation: {x: 0.00009851238, y: 0.06629539, z: -0.002467406, w: 0.9977971}
+      scale: {x: 1.0000005, y: 1.0000007, z: 1.000001}
+    - name: mixamorig:RightHandThumb1
+      parentName: mixamorig:RightHand
+      position: {x: -0.000000028610229, y: -0.000000095626596, z: 0.00000010371208}
+      rotation: {x: 0.060964946, y: -0.07552987, z: 0.44935635, w: 0.8880639}
+      scale: {x: 1.000001, y: 1.0000006, z: 1.0000004}
+    - name: mixamorig:RightHandThumb2
+      parentName: mixamorig:RightHandThumb1
+      position: {x: -0.0000000333786, y: 0.05582949, z: 0.000000057220458}
+      rotation: {x: -0.01060015, y: -0.031465087, z: -0.04003698, w: 0.9986464}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000004}
+    - name: mixamorig:RightHandThumb3
+      parentName: mixamorig:RightHandThumb2
+      position: {x: -0.0000000500679, y: 0.064155035, z: 0.000000047087667}
+      rotation: {x: 0.030017013, y: 0.075890034, z: 0.009274705, w: 0.99662113}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000002}
+    - name: mixamorig:RightHandThumb4
+      parentName: mixamorig:RightHandThumb3
+      position: {x: -0.000000002980232, y: 0.045908827, z: 0.000000006556511}
+      rotation: {x: -0.018239763, y: -0.012005118, z: -0.05711426, w: 0.9981289}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000001}
+    - name: mixamorig:RightHandThumb4_end
+      parentName: mixamorig:RightHandThumb4
+      position: {x: -0, y: 0.031825744, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightHandIndex1
+      parentName: mixamorig:RightHand
+      position: {x: -0.000000009536743, y: 0.04985361, z: 0.00000010550022}
+      rotation: {x: -0.013636633, y: -0.0004788487, z: 0.014415292, w: 0.999803}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: mixamorig:RightHandIndex2
+      parentName: mixamorig:RightHandIndex1
+      position: {x: 0.000000014305114, y: 0.09271467, z: 0.00000004529953}
+      rotation: {x: -0.009419686, y: 0.12376912, z: -0.0009847808, w: 0.9922659}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000002}
+    - name: mixamorig:RightHandIndex2_end
+      parentName: mixamorig:RightHandIndex2
+      position: {x: -0, y: 0.06709747, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:LeftUpLeg
+      parentName: mixamorig:Hips
+      position: {x: 0.112358026, y: -0.09997375, z: 0.0050619924}
+      rotation: {x: 0.00013787067, y: 0.0047211037, z: 0.9999424, w: -0.009636557}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: mixamorig:LeftLeg
+      parentName: mixamorig:LeftUpLeg
+      position: {x: -6.170012e-10, y: 0.15068735, z: -2.0489097e-10}
+      rotation: {x: -0.010035973, y: 0.00015419887, z: -0.017609583, w: 0.9997946}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.9999999}
+    - name: mixamorig:LeftFoot
+      parentName: mixamorig:LeftLeg
+      position: {x: 0.0000000051417737, y: 0.18209966, z: -0.000000008343486}
+      rotation: {x: 0.010244748, y: -0.94507605, z: 0.32591128, w: -0.02254562}
+      scale: {x: 0.9999996, y: 1.0000005, z: 1.0000005}
+    - name: mixamorig:LeftToeBase
+      parentName: mixamorig:LeftFoot
+      position: {x: -0.0000000054063274, y: 0.19505106, z: -0.000000006407499}
+      rotation: {x: -0.4343827, y: -0.017000295, z: 0.008200353, w: -0.9005307}
+      scale: {x: 1.0000001, y: 1, z: 1.0000004}
+    - name: mixamorig:LeftToeBase_end
+      parentName: mixamorig:LeftToeBase
+      position: {x: -0, y: 0.073155, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Spine.001
+      parentName: mixamorig:Hips
+      position: {x: 0.004132226, y: 0.06629218, z: 0.06828544}
+      rotation: {x: 0.7233141, y: 0.0000010487148, z: 0.0000008438782, w: 0.69051915}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: mixamorig:Spine.002
+      parentName: mixamorig:Spine.001
+      position: {x: -1.0365511e-10, y: 0.09576126, z: -0.00000002785768}
+      rotation: {x: -0.023189666, y: 0.000000118110286, z: -0.00000012742329, w: 0.9997311}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: mixamorig:Spine.003
+      parentName: mixamorig:Spine.002
+      position: {x: 3.1883146e-10, y: 0.115937546, z: 0.0000000112102185}
+      rotation: {x: -0, y: 7.6738615e-13, z: -0.0000000013961448, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: mixamorig:Spine.004
+      parentName: mixamorig:Spine.003
+      position: {x: 2.8667158e-10, y: 0.10673613, z: 0.000000012446189}
+      rotation: {x: 0.0000002961606, y: 9.9889504e-14, z: 0.0000000026892175, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: mixamorig:Spine.005
+      parentName: mixamorig:Spine.004
+      position: {x: 2.6077274e-10, y: 0.11532419, z: 0.000000027517501}
+      rotation: {x: -0.0000002961606, y: -1.8474117e-13, z: -0.000000001293105, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Spine.006
+      parentName: mixamorig:Spine.005
+      position: {x: 3.186868e-10, y: 0.1190047, z: 0.00000001244623}
+      rotation: {x: -0, y: -3.9790393e-13, z: -9.326046e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Spine.006_end
+      parentName: mixamorig:Spine.006
+      position: {x: -0, y: 0.11471069, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightUpLeg
+      parentName: mixamorig:Hips
+      position: {x: -0.11235804, y: -0.09997373, z: 0.005062032}
+      rotation: {x: -0.00013870608, y: 0.0047210474, z: 0.9999424, w: 0.009636615}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1}
+    - name: mixamorig:RightLeg
+      parentName: mixamorig:RightUpLeg
+      position: {x: 0.000000011750962, y: 0.15068735, z: -0.0000000033318064}
+      rotation: {x: -0.010035923, y: -0.00015531856, z: 0.017609546, w: 0.9997946}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+    - name: mixamorig:RightFoot
+      parentName: mixamorig:RightLeg
+      position: {x: -0.000000006922928, y: 0.18209964, z: -0.000000004187459}
+      rotation: {x: -0.010244658, y: -0.945076, z: 0.32591137, w: 0.022545734}
+      scale: {x: 0.9999998, y: 1.0000004, z: 1.0000006}
+    - name: mixamorig:RightToeBase
+      parentName: mixamorig:RightFoot
+      position: {x: -4.9825755e-10, y: 0.19505101, z: 0.0000000017136335}
+      rotation: {x: -0.4343827, y: 0.01700021, z: -0.008200247, w: -0.9005307}
+      scale: {x: 0.99999994, y: 1.0000006, z: 1.0000007}
+    - name: mixamorig:RightToeBase_end
+      parentName: mixamorig:RightToeBase
+      position: {x: -0, y: 0.073155016, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Accesorio Gato Mini Aliado Low.003
+      parentName: S_Cat_Ally(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Personaje Gato Mini Aliado Low
+      parentName: S_Cat_Ally(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

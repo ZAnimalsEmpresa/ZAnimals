@@ -13,6 +13,11 @@ public class MoveStrategy : IUnitStrategy
         _destination = destination;
     }
 
+    public string GetNameStrategy()
+    {
+        return "MoveStrategy";
+    }
+
     public void Execute()
     {
         if (_navMeshAgent != null && _destination != null)
@@ -20,5 +25,4 @@ public class MoveStrategy : IUnitStrategy
             _navMeshAgent.SetDestination(_destination.position);
         }
     }
-
 }
