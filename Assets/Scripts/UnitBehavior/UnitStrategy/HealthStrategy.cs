@@ -12,7 +12,12 @@ public class HealthStrategy : IUnitStrategy
 
     public void Execute()
     {
-            DealDamage();
+        DealDamage();
+    }
+
+    public string GetNameStrategy()
+    {
+        return "HealthStrategy";
     }
 
     private void DealDamage()
