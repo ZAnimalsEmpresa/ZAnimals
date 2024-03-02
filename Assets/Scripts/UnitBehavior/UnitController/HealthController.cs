@@ -13,9 +13,12 @@ public class HealthController : MonoBehaviour
     public delegate void UnitDeathDelegate();
     public event UnitDeathDelegate OnUnitDeath;
 
+    private Animator _animator;
+
     private void Start()
     {
         currentHealth = maxHealth;
+        _animator = GetComponent<Animator>();
     }
 
     // Method to reduce unit health
@@ -51,10 +54,11 @@ public class HealthController : MonoBehaviour
     // Method for handling unit death
     private void Die()
     {
+        _animator.SetBool("isDead", true);
         // Invoke OnUnitDeath event
         OnUnitDeath?.Invoke();
 
         // Destroy the unit
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 4);
     }
 }

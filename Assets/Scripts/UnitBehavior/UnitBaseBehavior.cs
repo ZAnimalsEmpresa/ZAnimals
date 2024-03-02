@@ -103,8 +103,8 @@ public class UnitBaseBehavior : MonoBehaviour
     {
         // Unsubscribe to OnUnitDeath event
         HealthController enemyHealthController = _targetUnit.GetComponent<HealthController>();
-        if (enemyHealthController != null)
-        {
+        if (enemyHealthController != null)        {
+
             enemyHealthController.OnUnitDeath -= OnEnemyDeath;
             _targetUnit = null;
         }
