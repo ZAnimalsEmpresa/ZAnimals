@@ -17,11 +17,14 @@ public class HealthController : MonoBehaviour
     public delegate void UnitDeathDelegate();
     public event UnitDeathDelegate OnUnitDeath;
 
+    private Animator _animator;
+
     private void Start()
     {
         currentHealth = maxHealth;
         originalColor = GetComponent<Renderer>().material.color;
         UpdateHealthSlider(); // Actualiza el slider al inicio
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -36,7 +39,7 @@ public class HealthController : MonoBehaviour
             GetComponent<Renderer>().material.color = originalColor;
         }
 
-        UpdateHealthSlider(); // Actualiza el slider en cada frame
+        UpdateHealthSlider(); // Actualiza el slider en cada frame        
     }
 
     public void TakeDamage(double damageAmount)
@@ -66,11 +69,13 @@ public class HealthController : MonoBehaviour
     // Method for handling unit death
     private void Die()
     {
+        _animator.SetBool("isDead", true);
+        
         // Invoke OnUnitDeath event
         OnUnitDeath?.Invoke();
 
         // Destroy the unit
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 4);
     }
 
     private void UpdateHealthSlider()

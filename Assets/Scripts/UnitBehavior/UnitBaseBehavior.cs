@@ -19,11 +19,16 @@ public class UnitBaseBehavior : MonoBehaviour
 
     private NavMeshAgent _agent;
 
+    private Animator _animator;
+    private UnitAnimations _unitAnimations;
+        
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _targetDestination = GetTargetDestination();
-        _unitContext = new UnitContext(new MoveStrategy(_agent, _targetDestination.transform));
+        _animator = GetComponent<Animator>();
+        _unitAnimations = new UnitAnimations(_animator);
+        _unitContext = new UnitContext(new MoveStrategy(_agent, _targetDestination.transform), _unitAnimations);   
     }
 
     void Update()
@@ -36,8 +41,10 @@ public class UnitBaseBehavior : MonoBehaviour
         if (other.gameObject.tag == GetCounterFaction() && _targetUnit == null)
         {
             _targetUnit = other.gameObject;
-            _unitContext.SetStrategy(new AttackStrategy(this.gameObject,_targetUnit, 0.5f));
-            _unitContext.StopCurrentStrategy(_agent,true);
+
+            _unitContext.SetStrategy(new AttackStrategy(this.gameObject,_targetUnit, 0.5f));            
+            _unitContext.StopCurrentStrategy(_agent,true);            
+
             // Obtain the enemy's HealthController
             HealthController enemyHealthController = _targetUnit.GetComponent<HealthController>();
             if (enemyHealthController != null)
@@ -92,13 +99,12 @@ public class UnitBaseBehavior : MonoBehaviour
         return resCounterFaction;
     }
 
-
     private void OnEnemyDeath()
     {
         // Unsubscribe to OnUnitDeath event
         HealthController enemyHealthController = _targetUnit.GetComponent<HealthController>();
-        if (enemyHealthController != null)
-        {
+        if (enemyHealthController != null)        {
+
             enemyHealthController.OnUnitDeath -= OnEnemyDeath;
             _targetUnit = null;
         }
