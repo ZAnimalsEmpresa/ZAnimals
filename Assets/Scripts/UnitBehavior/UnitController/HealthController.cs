@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
     public double maxHealth = 100.0;
     public double currentHealth;
+    public bool isPoisoned = false;
+    private Color originalColor;
+    public Slider healthSlider; // Referencia al slider de vida en el inspector
 
     // Events to manage unit health
     public delegate void HealthChangedDelegate(double newHealth, double maxHealth);
@@ -18,21 +22,32 @@ public class HealthController : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        originalColor = GetComponent<Renderer>().material.color;
+        UpdateHealthSlider(); // Actualiza el slider al inicio
         _animator = GetComponent<Animator>();
     }
 
-    // Method to reduce unit health
+    private void Update()
+    {
+        if (isPoisoned)
+        {
+            GetComponent<Renderer>().material.color = Color.red;
+            TakeDamage(maxHealth * 0.15 * Time.deltaTime);
+        }
+        else
+        {
+            GetComponent<Renderer>().material.color = originalColor;
+        }
+
+        UpdateHealthSlider(); // Actualiza el slider en cada frame        
+    }
+
     public void TakeDamage(double damageAmount)
     {
         currentHealth -= damageAmount;
-
-        // Ensuring that health is not less than zero
         currentHealth = Mathf.Max((float)currentHealth, 0f);
-
-        // Invoke the OnHealthChanged event
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
 
-        // If health reaches zero, the unit dies
         if (currentHealth <= 0)
         {
             Die();
@@ -55,10 +70,20 @@ public class HealthController : MonoBehaviour
     private void Die()
     {
         _animator.SetBool("isDead", true);
+        
         // Invoke OnUnitDeath event
         OnUnitDeath?.Invoke();
 
         // Destroy the unit
         Destroy(this.gameObject, 4);
+    }
+
+    private void UpdateHealthSlider()
+    {
+        if (healthSlider != null)
+        {
+            // Actualiza el valor del slider según la vida actual
+            healthSlider.value = (float)(currentHealth);
+        }
     }
 }
