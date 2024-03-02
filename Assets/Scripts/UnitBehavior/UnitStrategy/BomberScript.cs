@@ -4,21 +4,45 @@ using UnityEngine;
 
 public class BomberScript : MonoBehaviour
 {
-public GameObject bomberSphere; // Assign the prefab for the sphere
+    public GameObject bomberSphere; 
+    public float shootingCooldown = 5f; 
+    public float sphereColliderRadius = 10f; 
+
+    private float lastShotTime = 0f;
+    private Transform target; 
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Detect left mouse button click
+        if (Time.time - lastShotTime >= shootingCooldown)
         {
-            LaunchSphere();
+            FindTarget(); 
+            lastShotTime = Time.time;
         }
     }
 
-    private void LaunchSphere()
+    private void FindTarget()
     {
-        Vector3 launchDirection = transform.forward;
-        GameObject newSphere = Instantiate(bomberSphere, transform.position + launchDirection, Quaternion.identity);
-        Rigidbody rb = newSphere.GetComponent<Rigidbody>();
-        rb.velocity = launchDirection * 10f; // Set constant forward velocity
+        Collider[] colliders = Physics.OverlapSphere(transform.position, sphereColliderRadius);
+
+        foreach (var collider in colliders)
+        {
+            if (collider.CompareTag("Enemy"))
+            {
+                target = collider.transform;
+                ShootAtTarget();
+                break;
+            }
+        }
+    }
+
+    private void ShootAtTarget()
+    {
+        if (target != null)
+        {
+            Vector3 launchDirection = (target.position - transform.position).normalized;
+            GameObject newSphere = Instantiate(bomberSphere, transform.position + launchDirection, Quaternion.identity);
+            Rigidbody rb = newSphere.GetComponent<Rigidbody>();
+            rb.velocity = launchDirection * 10f;
+        }
     }
 }
