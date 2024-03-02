@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class HealthBarMove : MonoBehaviour
 {
-    public Transform target; // El objeto al que queremos mirar
-
+    public Transform target;
+    
+    void Start() 
+    {
+    target = Camera.main.GetComponent<Transform>();
+    }
+    
     void Update()
     {
-        // Rotamos la cámara cada cuadro para que siga mirando al objetivo
         transform.LookAt(target);
     }
 }

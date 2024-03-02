@@ -8093,6 +8093,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -7848952084472943420, guid: 732ae167001fefa40b794154be99d5cb, type: 3}
+    - target: {fileID: 4499870960317476726, guid: d3a9589200abe8c4398fdafafeed0e9a, type: 3}
+      propertyPath: shootingCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499870960317476726, guid: d3a9589200abe8c4398fdafafeed0e9a, type: 3}
+      propertyPath: sphereColliderRadius
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
