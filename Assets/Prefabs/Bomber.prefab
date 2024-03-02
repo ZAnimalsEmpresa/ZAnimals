@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 4886890701221962230}
   - component: {fileID: 1508748053863563549}
   - component: {fileID: 3517231921524752690}
-  - component: {fileID: 4499870960317476726}
+  - component: {fileID: 2379247284687941179}
   m_Layer: 0
   m_Name: Bomber
   m_TagString: Untagged
@@ -588,8 +588,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   isPoisoned: 0
-  healthSlider: {fileID: 585621211989032458}
---- !u!114 &4499870960317476726
+  healthSlider: {fileID: 0}
+--- !u!114 &2379247284687941179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -602,6 +602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomberSphere: {fileID: 5386925680906816031, guid: 34036d66439ebe44dbabc186f6282c6d, type: 3}
+  shootingCooldown: 5
+  sphereColliderRadius: 10
 --- !u!1 &4714434245169540537
 GameObject:
   m_ObjectHideFlags: 0

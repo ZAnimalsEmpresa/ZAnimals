@@ -19,11 +19,16 @@ public class UnitHealthBaseBehavior : MonoBehaviour
 
     private NavMeshAgent _agent;
 
+    private Animator _animator;
+    private UnitAnimations _unitAnimations;
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _targetDestination = GetTargetDestination();
-        _unitContext = new UnitContext(new MoveStrategy(_agent, _targetDestination.transform));
+        _animator = GetComponent<Animator>();
+        _unitAnimations = new UnitAnimations(_animator);
+        _unitContext = new UnitContext(new MoveStrategy(_agent, _targetDestination.transform), _unitAnimations);
     }
 
     void Update()

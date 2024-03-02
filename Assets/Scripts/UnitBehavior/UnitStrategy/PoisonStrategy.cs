@@ -12,7 +12,12 @@ public class PoisonStrategy : IUnitStrategy
 
     public void Execute()
     {
-            DealDamage();
+        DealDamage();
+    }
+
+    public string GetNameStrategy()
+    {
+        return "PoisonStrategy";
     }
 
     private void DealDamage()
