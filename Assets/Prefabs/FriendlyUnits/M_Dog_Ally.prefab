@@ -304,6 +304,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  isPoisoned: 0
+  healthSlider: {fileID: 0}
 --- !u!114 &7573059735742664938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +322,7 @@ MonoBehaviour:
   healthController: {fileID: 617973948776065516}
   unitFaction: 0
   attackValue: 0
+  _poisonDamage: 0
   rangeAttack: 0
   currentLife: 0
 --- !u!114 &5102674806759434285

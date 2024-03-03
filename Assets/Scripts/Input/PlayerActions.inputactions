@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UnitDeploymentFourthSlot",
+                    "type": "Button",
+                    "id": "91a0d50c-d641-4165-8f9a-5ca3d69e44b1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -223,6 +232,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "UnitDeploymentThirdSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0dca8a84-c7f2-45ba-af5a-a2f1cc7bcb65",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UnitDeploymentFourthSlot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

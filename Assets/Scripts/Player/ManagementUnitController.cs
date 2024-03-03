@@ -14,6 +14,8 @@ public class ManagementUnitController : MonoBehaviour
     private GameObject _unitSecondSlot;
     [SerializeField]
     private GameObject _unitThirdSlot;
+    [SerializeField]
+    private GameObject _unitFourthSlot;
 
     private GameObject _currentSpawnPoint;
 
@@ -43,16 +45,28 @@ public class ManagementUnitController : MonoBehaviour
             DeployUnit(_unitThirdSlot);
         }
     }
+
+    public void OnUnitDeplymentFourthSlot(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Spawn Unit 4");
+            DeployUnit(_unitFourthSlot);
+        }
+    }
+
     public void SetSpawnPoint(GameObject spawnObject)
     {
         _currentSpawnPoint = spawnObject;
     }
+
     private void DeployUnit(GameObject unit)
     {
         //Vector3 sPoint = GetRandomPointInSquareCollider();
         Instantiate(unit, _currentSpawnPoint.transform.position, Quaternion.identity);
         //Instantiate(unit, _currentSpawnPoint.transform.position,Quaternion.identity);
     }
+
     // Method to get a random point within the collider's bounds
     private Vector3 GetRandomPointInSquareCollider()
     {
