@@ -103,7 +103,7 @@ MonoBehaviour:
   _cameraMovementSpeed: 20
   _cameraRotateSpeed: 89.3
   _fieldOfViewMin: 5
-  _fieldOfViewMax: 50
+  _fieldOfViewMax: 200
 --- !u!114 &7097474678227377853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,9 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80dc655a07a152748a5875394684b855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unitFirstSlot: {fileID: 9038790918073393320, guid: fdf74b21efafc7e43a44b32e6bd0cbc4, type: 3}
-  _unitSecondSlot: {fileID: 9038790918073393320, guid: fdf74b21efafc7e43a44b32e6bd0cbc4, type: 3}
-  _unitThirdSlot: {fileID: 9038790918073393320, guid: fdf74b21efafc7e43a44b32e6bd0cbc4, type: 3}
+  _unitFirstSlot: {fileID: 5481373448514376536, guid: 36a28c6fcaa04df4c8f512419a69bd93, type: 3}
+  _unitSecondSlot: {fileID: 6235756869531875759, guid: 9d83f064a329eca41b53dec0b88b6128, type: 3}
+  _unitThirdSlot: {fileID: 868738441461523567, guid: 83d4742f92f4f14458cb0e39703f0f5f, type: 3}
+  _unitFourthSlot: {fileID: 7743369876274821274, guid: eea6814213feda64884abe5793dae615, type: 3}
 --- !u!114 &3424321198009413478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +282,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 3fde6cf2-362a-42b9-8ad4-72e8766fd803
     m_ActionName: TurretController/Shoot[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7097474678227377853}
+        m_TargetAssemblyTypeName: ManagementUnitController, Assembly-CSharp
+        m_MethodName: OnUnitDeplymentFourthSlot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 91a0d50c-d641-4165-8f9a-5ca3d69e44b1
+    m_ActionName: UnitManagement/UnitDeploymentFourthSlot[/Keyboard/4]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Default
   m_DefaultActionMap: UnitManagement

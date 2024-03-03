@@ -80,6 +80,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UnitDeploymentFourthSlot"",
+                    ""type"": ""Button"",
+                    ""id"": ""91a0d50c-d641-4165-8f9a-5ca3d69e44b1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -247,6 +256,17 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""UnitDeploymentThirdSlot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0dca8a84-c7f2-45ba-af5a-a2f1cc7bcb65"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UnitDeploymentFourthSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -331,6 +351,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_UnitManagement_UnitDeploymentFirstSlot = m_UnitManagement.FindAction("UnitDeploymentFirstSlot", throwIfNotFound: true);
         m_UnitManagement_UnitDeploymentSecondSlot = m_UnitManagement.FindAction("UnitDeploymentSecondSlot", throwIfNotFound: true);
         m_UnitManagement_UnitDeploymentThirdSlot = m_UnitManagement.FindAction("UnitDeploymentThirdSlot", throwIfNotFound: true);
+        m_UnitManagement_UnitDeploymentFourthSlot = m_UnitManagement.FindAction("UnitDeploymentFourthSlot", throwIfNotFound: true);
         // TurretController
         m_TurretController = asset.FindActionMap("TurretController", throwIfNotFound: true);
         m_TurretController_Sight = m_TurretController.FindAction("Sight", throwIfNotFound: true);
@@ -402,6 +423,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_UnitManagement_UnitDeploymentFirstSlot;
     private readonly InputAction m_UnitManagement_UnitDeploymentSecondSlot;
     private readonly InputAction m_UnitManagement_UnitDeploymentThirdSlot;
+    private readonly InputAction m_UnitManagement_UnitDeploymentFourthSlot;
     public struct UnitManagementActions
     {
         private @PlayerActions m_Wrapper;
@@ -412,6 +434,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         public InputAction @UnitDeploymentFirstSlot => m_Wrapper.m_UnitManagement_UnitDeploymentFirstSlot;
         public InputAction @UnitDeploymentSecondSlot => m_Wrapper.m_UnitManagement_UnitDeploymentSecondSlot;
         public InputAction @UnitDeploymentThirdSlot => m_Wrapper.m_UnitManagement_UnitDeploymentThirdSlot;
+        public InputAction @UnitDeploymentFourthSlot => m_Wrapper.m_UnitManagement_UnitDeploymentFourthSlot;
         public InputActionMap Get() { return m_Wrapper.m_UnitManagement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -439,6 +462,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @UnitDeploymentThirdSlot.started += instance.OnUnitDeploymentThirdSlot;
             @UnitDeploymentThirdSlot.performed += instance.OnUnitDeploymentThirdSlot;
             @UnitDeploymentThirdSlot.canceled += instance.OnUnitDeploymentThirdSlot;
+            @UnitDeploymentFourthSlot.started += instance.OnUnitDeploymentFourthSlot;
+            @UnitDeploymentFourthSlot.performed += instance.OnUnitDeploymentFourthSlot;
+            @UnitDeploymentFourthSlot.canceled += instance.OnUnitDeploymentFourthSlot;
         }
 
         private void UnregisterCallbacks(IUnitManagementActions instance)
@@ -461,6 +487,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @UnitDeploymentThirdSlot.started -= instance.OnUnitDeploymentThirdSlot;
             @UnitDeploymentThirdSlot.performed -= instance.OnUnitDeploymentThirdSlot;
             @UnitDeploymentThirdSlot.canceled -= instance.OnUnitDeploymentThirdSlot;
+            @UnitDeploymentFourthSlot.started -= instance.OnUnitDeploymentFourthSlot;
+            @UnitDeploymentFourthSlot.performed -= instance.OnUnitDeploymentFourthSlot;
+            @UnitDeploymentFourthSlot.canceled -= instance.OnUnitDeploymentFourthSlot;
         }
 
         public void RemoveCallbacks(IUnitManagementActions instance)
@@ -549,6 +578,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnUnitDeploymentFirstSlot(InputAction.CallbackContext context);
         void OnUnitDeploymentSecondSlot(InputAction.CallbackContext context);
         void OnUnitDeploymentThirdSlot(InputAction.CallbackContext context);
+        void OnUnitDeploymentFourthSlot(InputAction.CallbackContext context);
     }
     public interface ITurretControllerActions
     {

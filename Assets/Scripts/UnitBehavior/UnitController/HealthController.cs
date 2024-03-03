@@ -8,7 +8,7 @@ public class HealthController : MonoBehaviour
     public double maxHealth = 100.0;
     public double currentHealth;
     public bool isPoisoned = false;
-    private Color originalColor;
+    private Material _originalColor;
     public Slider healthSlider; // Referencia al slider de vida en el inspector
 
     // Events to manage unit health
@@ -19,10 +19,14 @@ public class HealthController : MonoBehaviour
 
     private Animator _animator;
 
+    public Material MaterialPoison;
+    private MeshRenderer _meshUnit;
+
     private void Start()
     {
         currentHealth = maxHealth;
-        originalColor = GetComponent<Renderer>().material.color;
+        _meshUnit = GetComponent<MeshRenderer>();
+        _originalColor = _meshUnit.materials[0];
         UpdateHealthSlider(); // Actualiza el slider al inicio
         _animator = GetComponent<Animator>();
     }
@@ -31,12 +35,13 @@ public class HealthController : MonoBehaviour
     {
         if (isPoisoned)
         {
-            GetComponent<Renderer>().material.color = Color.red;
+            //GetComponent<Renderer>().material.color = Color.red;
+            _meshUnit.materials[0] = MaterialPoison;
             TakeDamage(maxHealth * 0.15 * Time.deltaTime);
         }
         else
         {
-            GetComponent<Renderer>().material.color = originalColor;
+            _meshUnit.materials[0] = _originalColor;
         }
 
         UpdateHealthSlider(); // Actualiza el slider en cada frame        

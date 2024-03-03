@@ -109,6 +109,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ally
       objectReference: {fileID: 0}
+    - target: {fileID: 2594713474659250388, guid: 7f9285e3132c2a142a91955214b6a9e3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b52d36adf562bbb45be3a2f428bf40fb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -299,6 +303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  isPoisoned: 0
+  healthSlider: {fileID: 0}
 --- !u!114 &7137589467638208112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +321,7 @@ MonoBehaviour:
   healthController: {fileID: -2720653675541361436}
   unitFaction: 0
   attackValue: 0
+  _poisonDamage: 0
   rangeAttack: 0
   currentLife: 0
 --- !u!114 &4006729133335204076

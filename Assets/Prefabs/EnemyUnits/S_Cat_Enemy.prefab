@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 270983053767869448, guid: 9a147491a53a35d4d981670472f03db8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37d0230f242a7a14a828cd4dbeed18a1, type: 2}
     - target: {fileID: 919132149155446097, guid: 9a147491a53a35d4d981670472f03db8, type: 3}
       propertyPath: m_Name
       value: S_Cat_Enemy
@@ -109,6 +113,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2575721001347588797, guid: 9a147491a53a35d4d981670472f03db8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37d0230f242a7a14a828cd4dbeed18a1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -299,6 +307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  isPoisoned: 0
+  healthSlider: {fileID: 0}
 --- !u!114 &-6111759502648587471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +325,7 @@ MonoBehaviour:
   healthController: {fileID: 4754457595719220570}
   unitFaction: 1
   attackValue: 0
+  _poisonDamage: 0
   rangeAttack: 0
   currentLife: 0
 --- !u!114 &2330412924766313261

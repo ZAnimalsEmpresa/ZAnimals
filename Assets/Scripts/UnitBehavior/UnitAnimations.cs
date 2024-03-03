@@ -25,12 +25,12 @@ public class UnitAnimations
                 _animator.SetBool("Walk", true);
                 break;
 
-            case "SpawnStrategy":
+            /*case "SpawnStrategy":
                 if (_animator.GetParameter(1).name == "Spawn")
                 {
                     _animator.SetBool("Spawn", true);
                 }                    
-                break;
+                break;*/
 
             default:
                 break;
