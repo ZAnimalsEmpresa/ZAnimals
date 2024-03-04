@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7362,6 +7362,7 @@ GameObject:
   - component: {fileID: 3490315125215423423}
   - component: {fileID: 7803124253843577557}
   - component: {fileID: 2185436318554806614}
+  - component: {fileID: 7803124253843577558}
   m_Layer: 0
   m_Name: RestartLevelButton
   m_TagString: Untagged
@@ -7505,7 +7506,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6923515181244287709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7803124253843577558}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3519439093607260270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11569,6 +11582,24 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &7803124253843577558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3285969964272221450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a7b994bdfdb5149823b513ba7f633a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: {fileID: 11400000, guid: 34d2ba48986b8b245b18caf7baaeb4e3, type: 2}
+  currentScene: {fileID: 0}
+  levelEntrance: {fileID: 0}
+  loadingScreen: 1
+  playerPath: {fileID: 11400000, guid: b40d75be8e59d8141b29af4182f59def, type: 2}
+  loadSceneEvent: {fileID: 11400000, guid: 2f676c0fc2c3dc141932bc992b0a3ed0, type: 2}
 --- !u!222 &7818894609844606152
 CanvasRenderer:
   m_ObjectHideFlags: 0
