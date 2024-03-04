@@ -103,7 +103,7 @@ MonoBehaviour:
   _cameraMovementSpeed: 20
   _cameraRotateSpeed: 89.3
   _fieldOfViewMin: 5
-  _fieldOfViewMax: 200
+  _fieldOfViewMax: 110
 --- !u!114 &7097474678227377853
 MonoBehaviour:
   m_ObjectHideFlags: 0
