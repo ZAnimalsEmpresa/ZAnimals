@@ -1,52 +1,68 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
 
-[RequireComponent(typeof(UnitStats))]
-public class UnitBaseBehavior : MonoBehaviour
+
+[System.Serializable]
+public class UnitBaseBehavior
 {
-    [SerializeField]
-    private UnitStats _unitStats;
-    [SerializeField]
+    // Private
+    private UnitScript _unitScript;
+
     private GameObject _targetDestination;
-    [SerializeField]
+
     private UnitContext _unitContext;
-    [SerializeField]
+
     private GameObject _targetUnit;
 
     private NavMeshAgent _agent;
 
-    private Animator _animator;
     private UnitAnimations _unitAnimations;
-        
-    void Start()
-    {
-        _agent = GetComponent<NavMeshAgent>();
-        _targetDestination = GetTargetDestination();
-        _animator = GetComponent<Animator>();
-        _unitAnimations = new UnitAnimations(_animator);
-        _unitContext = new UnitContext(new MoveStrategy(_agent, _targetDestination.transform), _unitAnimations);   
-    }
 
-    void Update()
+    private GameObject _bomb;
+
+    public UnitBaseBehavior(UnitScript unitScript, Animator animator, NavMeshAgent navMeshAgent, GameObject bomb) 
+    {
+        _unitScript = unitScript;
+        _targetDestination = GetTargetDestination();
+        _agent = navMeshAgent;
+        _unitAnimations = new UnitAnimations(animator);
+        _unitContext = new UnitContext(new MoveStrategy(_agent, _targetDestination.transform), _unitAnimations);
+        _bomb = bomb;
+    }
+    public void HandleBaseBehavior()
     {
         _unitContext.ExecuteStrategy();
     }
-
-    private void OnTriggerEnter(Collider other)
+    public void StopAllBehaviors()
     {
-        if (other.gameObject.tag == GetCounterFaction() && _targetUnit == null)
+        // Detener todos los comportamientos aquí
+
+        // Por ejemplo, si estás utilizando un NavMeshAgent, podrías detenerlo así:
+        if (_agent != null)
         {
-            _targetUnit = other.gameObject;
+            _agent.ResetPath(); // Detener el movimiento del NavMeshAgent
+        }
 
-            _unitContext.SetStrategy(new AttackStrategy(this.gameObject,_targetUnit, 0.5f));            
-            _unitContext.StopCurrentStrategy(_agent,true);            
-
+        // Detener cualquier otro comportamiento que esté activo en tu juego
+    }
+    public void HandleEnterBehavior(GameObject other)
+    {
+        if (other.tag == GetCounterFaction() && _targetUnit == null)
+        {
+            _targetUnit = other;
+            if (_unitScript.unitStats.IsBomber)
+            {
+                _unitContext.SetStrategy(new AttackBombStrategy(_unitScript.gameObject, _targetUnit, _bomb));
+            }
+            else
+            {
+                _unitContext.SetStrategy(new AttackStrategy(_unitScript.gameObject, _targetUnit));
+            }
+            
+            _unitContext.StopCurrentStrategy(_agent, true);
+            _unitContext.ExecuteStrategy();
             // Obtain the enemy's HealthController
-            HealthController enemyHealthController = _targetUnit.GetComponent<HealthController>();
+            HealthController enemyHealthController = _targetUnit.GetComponent<UnitScript>().healthController;
             if (enemyHealthController != null)
             {
                 // Subscribe to the OnUnitDeath event to detect when the enemy is destroyed
@@ -54,55 +70,57 @@ public class UnitBaseBehavior : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerExit(Collider other)
+    public void HandleExitBehavior(GameObject other)
     {
         if (other.gameObject.tag == GetCounterFaction() && other.gameObject == _targetUnit)
         {
             _targetUnit = null;
             _unitContext.StopCurrentStrategy(_agent, false);
             _unitContext.SetStrategy(new MoveStrategy(_agent, _targetDestination.transform));
-        }
-        // Unsubscribe to the OnUnitDeath event if the enemy is no longer in contact
-        HealthController enemyHealthController = other.gameObject.GetComponent<HealthController>();
-        if (enemyHealthController != null)
-        {
-            enemyHealthController.OnUnitDeath -= OnEnemyDeath;
+            _unitContext.ExecuteStrategy();
+            // Unsubscribe to the OnUnitDeath event if the enemy is no longer in contact
+            HealthController enemyHealthController = other.gameObject.GetComponent<UnitScript>().healthController;
+            if (enemyHealthController != null)
+            {
+                enemyHealthController.OnUnitDeath -= OnEnemyDeath;
+            }
         }
     }
-
+    public void HandleDeathBehavior()
+    {
+        _unitContext.SetStrategy(new DeathSrategy(_agent, false));
+        _unitContext.ExecuteStrategy();
+    }
     private GameObject GetTargetDestination()
     {
         GameObject resDestination = null;
-        if (unitFaction.Ally == _unitStats.unitFaction)
+        if (UnitFaction.Ally == _unitScript.unitStats.UnitFaction)
         {
             resDestination = GameObject.FindGameObjectWithTag("EnemyBase");
         }
-        else if(unitFaction.Enemy == _unitStats.unitFaction)
+        else if(UnitFaction.Enemy == _unitScript.unitStats.UnitFaction)
         {
             resDestination = GameObject.FindGameObjectWithTag("AllyBase");
         }
         return resDestination;
     }
-
     private string GetCounterFaction()
     {
         string resCounterFaction = "";
-        if (unitFaction.Ally == _unitStats.unitFaction)
+        if (UnitFaction.Ally == _unitScript.unitStats.UnitFaction)
         {
             resCounterFaction = "Enemy";
         }
-        else if (unitFaction.Enemy == _unitStats.unitFaction)
+        else if (UnitFaction.Enemy == _unitScript.unitStats.UnitFaction)
         {
             resCounterFaction = "Ally";
         }
         return resCounterFaction;
     }
-
-    private void OnEnemyDeath()
+    public void OnEnemyDeath()
     {
         // Unsubscribe to OnUnitDeath event
-        HealthController enemyHealthController = _targetUnit.GetComponent<HealthController>();
+        HealthController enemyHealthController = _targetUnit.GetComponent<UnitScript>().healthController;
         if (enemyHealthController != null)        {
 
             enemyHealthController.OnUnitDeath -= OnEnemyDeath;
@@ -110,17 +128,24 @@ public class UnitBaseBehavior : MonoBehaviour
         }
 
         // Check if there is another enemy in range
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, _unitStats.rangeAttack);
+        Collider[] hitColliders = Physics.OverlapSphere(_unitScript.transform.position, 3);
         foreach (var hitCollider in hitColliders)
         {
-            if (hitCollider.gameObject != gameObject && hitCollider.CompareTag(GetCounterFaction()))
+            if (hitCollider.gameObject != _unitScript.gameObject && hitCollider.CompareTag(GetCounterFaction()))
             {
                 // Once another enemy in range is found, establish a new attack strategy.
                 _targetUnit = hitCollider.gameObject;
-                _unitContext.SetStrategy(new AttackStrategy(gameObject, _targetUnit, 0.5f));
+                if (_unitScript.unitStats.IsBomber)
+                {
+                    _unitContext.SetStrategy(new AttackBombStrategy(_unitScript.gameObject, _targetUnit, _bomb));
+                }
+                else
+                {
+                    _unitContext.SetStrategy(new AttackStrategy(_unitScript.gameObject, _targetUnit));
+                }
 
                 // Subscribe to the OnUnitDeath event of the new enemy
-                HealthController newEnemyHealthController = _targetUnit.GetComponent<HealthController>();
+                HealthController newEnemyHealthController = _targetUnit.GetComponent<UnitScript>().healthController;
                 if (newEnemyHealthController != null)
                 {
                     newEnemyHealthController.OnUnitDeath += OnEnemyDeath;
@@ -135,17 +160,9 @@ public class UnitBaseBehavior : MonoBehaviour
         _unitContext.StopCurrentStrategy(_agent, false);
         _unitContext.SetStrategy(new MoveStrategy(_agent, _targetDestination.transform));
     }
-
-    private void OnDestroy()
+    public string GetNameContext()
     {
-        // Desuscribirse del evento OnUnitDeath si está suscrito
-        if (_targetUnit != null)
-        {
-            HealthController enemyHealthController = _targetUnit.GetComponent<HealthController>();
-            if (enemyHealthController != null)
-            {
-                enemyHealthController.OnUnitDeath -= OnEnemyDeath;
-            }
-        }
+        return _unitContext.GetNameStrategy();
     }
+    public GameObject TargetUnit { get => _targetUnit; set => _targetUnit = value; }
 }

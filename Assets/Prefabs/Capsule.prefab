@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80dc655a07a152748a5875394684b855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unitFirstSlot: {fileID: 5481373448514376536, guid: 36a28c6fcaa04df4c8f512419a69bd93, type: 3}
-  _unitSecondSlot: {fileID: 6235756869531875759, guid: 9d83f064a329eca41b53dec0b88b6128, type: 3}
+  _unitFirstSlot: {fileID: 7232798397110297012, guid: 8c46c488732c1cb4195dc3dd0f83e274, type: 3}
+  _unitSecondSlot: {fileID: 7232798397110297012, guid: 0208dc744bf46b246bc6d5860fcec7c0, type: 3}
   _unitThirdSlot: {fileID: 868738441461523567, guid: 83d4742f92f4f14458cb0e39703f0f5f, type: 3}
   _unitFourthSlot: {fileID: 7743369876274821274, guid: eea6814213feda64884abe5793dae615, type: 3}
 --- !u!114 &3424321198009413478

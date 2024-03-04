@@ -15,7 +15,7 @@ public class BombaScript : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        healthController = GetComponent<HealthController>();
+        //healthController = GetComponent<HealthController>();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -27,25 +27,25 @@ public class BombaScript : MonoBehaviour
 
             if (other.gameObject.CompareTag("Enemy"))
             {
+                healthController = other.gameObject.GetComponent<UnitScript>().healthController;
                 healthController.TakeDamage(bounceDamage);
             }
         }
         else
         {
-            Destroy(gameObject);
-            
             Collider[] colliders = Physics.OverlapSphere(transform.position, 10f); 
             foreach (var collider in colliders)
             {
                 if (collider.CompareTag("Enemy"))
                 {
-                    HealthController enemyHealth = collider.GetComponent<HealthController>();
+                    HealthController enemyHealth = collider.GetComponent<UnitScript>().healthController;
                     if (enemyHealth != null)
                     {
                         enemyHealth.TakeDamage(areaDamage);
                     }
                 }
             }
+            Destroy(gameObject);
         }
     }
 }
