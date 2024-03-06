@@ -534,7 +534,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6089049711669751102}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6404019743808224567}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &444640656701539357
 Transform:
   m_ObjectHideFlags: 0
@@ -791,7 +803,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3247761360537042877}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7346458971660588552}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1444805786046469438
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,6 +1019,7 @@ GameObject:
   - component: {fileID: 1309426770859685843}
   - component: {fileID: 7346458971660588551}
   - component: {fileID: 3063122657702617710}
+  - component: {fileID: 7346458971660588552}
   m_Layer: 0
   m_Name: Credits
   m_TagString: Untagged
@@ -2038,8 +2063,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a7b994bdfdb5149823b513ba7f633a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: {fileID: 11400000, guid: 6428d2186a611fe45bf789b17a6de7c2, type: 2}
-  currentScene: {fileID: 11400000, guid: 34d2ba48986b8b245b18caf7baaeb4e3, type: 2}
+  sceneToLoad: {fileID: 11400000, guid: 7440d5059d14fcb418a80d4158a4b34f, type: 2}
+  currentScene: {fileID: 0}
   levelEntrance: {fileID: 0}
   loadingScreen: 1
   playerPath: {fileID: 11400000, guid: b40d75be8e59d8141b29af4182f59def, type: 2}
@@ -2282,6 +2307,24 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &7346458971660588552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653868155139119286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a7b994bdfdb5149823b513ba7f633a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: {fileID: 11400000, guid: dbf722785abedcd4ebd8c7621cf2bdd6, type: 2}
+  currentScene: {fileID: 11400000, guid: 34d2ba48986b8b245b18caf7baaeb4e3, type: 2}
+  levelEntrance: {fileID: 0}
+  loadingScreen: 0
+  playerPath: {fileID: 11400000, guid: b40d75be8e59d8141b29af4182f59def, type: 2}
+  loadSceneEvent: {fileID: 11400000, guid: 2f676c0fc2c3dc141932bc992b0a3ed0, type: 2}
 --- !u!114 &7399447385660869888
 MonoBehaviour:
   m_ObjectHideFlags: 0

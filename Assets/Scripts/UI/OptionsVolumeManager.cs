@@ -19,8 +19,8 @@ public class OptionsVolumeManager : MonoBehaviour
         Music = FMODUnity.RuntimeManager.GetBus("bus:/Music");
         SFX = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
         masterSlider.value = 1;
-        musicSlider.value = 1;
-        sfxSlider.value = 1;
+        musicSlider.value = 0.3f;
+        sfxSlider.value = 0.4f;
     }
 
     public void ChangeVolume()

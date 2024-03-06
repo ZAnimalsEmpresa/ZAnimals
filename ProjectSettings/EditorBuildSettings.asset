@@ -8,19 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 78a12e49041a8774a84840f4f66a05f4
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: cfe8fa08f10090e4abb32542b8f3904d
   - enabled: 1
     path: Assets/Scenes/Managers.unity
     guid: 10c8f86897eadf645841e5d96a0bbfae
-  - enabled: 0
-    path: Assets/Scenes/SampleScene 1.unity
-    guid: 837ae77ff7be46e42b36f16b7dff0035
   - enabled: 1
-    path: Assets/Karmen/Level01_KSB.unity
-    guid: c4232dbd1882e04409366d9bf63d93af
+    path: Assets/Scenes/Level01_KSB.unity
+    guid: f5f31bb01d523a84396d37fb58ba8281
   m_configObjects: {}

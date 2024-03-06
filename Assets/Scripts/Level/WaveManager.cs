@@ -11,13 +11,10 @@ public class WaveManager : MonoBehaviour
     public Transform spawnPosition;
     public BoxCollider spawnSite;
 
-
     private Vector3 _spawnCubeSize = new Vector3(1f, 1f, 1f); // Size of spawning cube
-
 
     private void Start()
     {
-
         _spawnCubeSize = spawnSite.size;
         // Start wave generation
         StartCoroutine(SpawnWaves());
@@ -42,8 +39,9 @@ public class WaveManager : MonoBehaviour
             // Use the factory to create a new enemy
             GameObject enemy = enemyFactory.CreateEnemy();
 
-            // Configure the position of enemies as required
+            // Configure the position and rotation of enemies as required
             enemy.transform.position = GetRandomSpawnCubePosition();
+            enemy.transform.rotation = spawnSite.transform.rotation;
         }
     }
 
