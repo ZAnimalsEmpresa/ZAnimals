@@ -49,6 +49,10 @@ public class HealthController
             Die();
         }
     }
+    public void Poisoned()
+    {
+        TakeDamage(maxHealth * 0.15 * Time.deltaTime);
+    }
 
     // Method to restore unit health
     public void Heal(double healAmount)
