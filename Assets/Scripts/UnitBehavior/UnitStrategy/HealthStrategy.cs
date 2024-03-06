@@ -22,10 +22,10 @@ public class HealthStrategy : IUnitStrategy
 
     private void DealDamage()
     {
-        if (_enemyHealthController == true)
-        {
-           // Curar cada vez que golpea
-            _enemyHealthController.isPoisoned = false;
-        }
+        //if (_enemyHealthController == true)
+        //{
+        //   // Curar cada vez que golpea
+        //    _enemyHealthController.isPoisoned = false;
+        //}
     }
 }

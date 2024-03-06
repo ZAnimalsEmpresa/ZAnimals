@@ -23,7 +23,6 @@ public class ManagementUnitController : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Spawn Unit 1");
             DeployUnit(_unitFirstSlot);
         }
     }
@@ -32,7 +31,6 @@ public class ManagementUnitController : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Spawn Unit 2");
             DeployUnit(_unitSecondSlot);
         }
     }
@@ -41,7 +39,6 @@ public class ManagementUnitController : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Spawn Unit 3");
             DeployUnit(_unitThirdSlot);
         }
     }
@@ -50,7 +47,6 @@ public class ManagementUnitController : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Spawn Unit 4");
             DeployUnit(_unitFourthSlot);
         }
     }

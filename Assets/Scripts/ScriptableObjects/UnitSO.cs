@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class UnitSO : ScriptableObject
 {
-    public unitSize unitSize;
-    public unitFaction unitFaction;
-    public unitSpecialSkill unitSpecialSkill;
-    public unitAttackType unitAttackType;
+    public UnitSize unitSize;
+    public UnitFaction unitFaction;
+    public UnitSpecialSkill unitSpecialSkill;
+    public UnitAttackType unitAttackType;
     public int cost;
     public int reward;
-    public double life;
+    public double health;
     public double attack;
     public double poisonDamage;
     public float rangeAttack;
@@ -23,7 +23,7 @@ public class UnitSO : ScriptableObject
     //public enum speedMovement {slow, medium, fast}
 }
 
-public enum unitFaction {Ally, Enemy}
-public enum unitSize {basic, medium, large, turret}
-public enum unitAttackType {melee, ranged}
-public enum unitSpecialSkill {None, HiddenAmongUnits, HiddenUnderground, TurretAttack, OnlyBaseAttack, PoisonAttack}
+public enum UnitFaction {Ally, Enemy}
+public enum UnitSize {basic, medium, large, turret}
+public enum UnitAttackType {melee, ranged}
+public enum UnitSpecialSkill {None, HiddenAmongUnits, HiddenUnderground, TurretAttack, OnlyBaseAttack, PoisonAttack}

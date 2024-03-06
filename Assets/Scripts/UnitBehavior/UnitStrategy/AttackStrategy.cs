@@ -6,16 +6,16 @@ public class AttackStrategy : IUnitStrategy
     private GameObject _currentUnit;
     private GameObject _enemy;
     private HealthController _enemyHealthController;
+    private float _attackValue;
     private float _lastAttackTime;
     private float _attackCooldown;
 
-    public AttackStrategy(GameObject currentUnit,GameObject enemy, float attackCooldown)
+    public AttackStrategy(GameObject currentUnit,GameObject enemy)
     {
         _currentUnit = currentUnit;
-        _enemy = enemy;
-        _enemyHealthController = enemy.GetComponent<HealthController>(); // Obtener el HealthController del enemigo
-        _attackCooldown = attackCooldown;
-        _lastAttackTime = Time.time - attackCooldown; // Initialise to allow first attack
+        _enemyHealthController = enemy.GetComponent<UnitScript>().healthController; // Obtener el HealthController del enemigo
+        _attackCooldown = enemy.GetComponent<UnitScript>().unitStats.RateFire;
+        _lastAttackTime = Time.time - _attackCooldown; // Initialise to allow first attack
     }
 
     public string GetNameStrategy()
@@ -44,7 +44,7 @@ public class AttackStrategy : IUnitStrategy
         if (_enemyHealthController != null)
         {
             // Llamar al método TakeDamage del HealthController del enemigo
-            _enemyHealthController.TakeDamage(_currentUnit.GetComponent<UnitStats>().attackValue);            
+            _enemyHealthController.TakeDamage(_currentUnit.GetComponent<UnitScript>().unitStats.AttackValue);            
         }
     }
 }
