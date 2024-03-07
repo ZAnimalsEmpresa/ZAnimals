@@ -8,6 +8,7 @@ public class HealthController
     private double maxHealth;
     private double currentHealth;
     private bool isPoisoned = false;
+    private float _lastPoisonDamage;
 
     // Events to manage unit health
     public delegate void HealthChangedDelegate(double newHealth, double maxHealth);
@@ -51,7 +52,23 @@ public class HealthController
     }
     public void Poisoned()
     {
-        TakeDamage(maxHealth * 0.15 * Time.deltaTime);
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+        else 
+        { 
+            float currentTime = Time.time;
+
+            float timeSinceLastPoisonDamage = currentTime - _lastPoisonDamage;
+
+            if (timeSinceLastPoisonDamage >= 1f)
+            {
+            TakeDamage(maxHealth * 0.15);
+            _lastPoisonDamage = Time.time;
+            }
+        }
+        
     }
 
     // Method to restore unit health

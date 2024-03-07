@@ -39,6 +39,11 @@ public class UnitScript : MonoBehaviour
         {
             _unitBaseBehavior.HandleBaseBehavior();
         }
+        if (healthController.IsPoisoned)
+        {
+            healthController.Poisoned();
+        } 
+        
     }
     private void OnTriggerEnter(Collider other)
     {

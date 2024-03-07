@@ -1258,12 +1258,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 11400000, guid: cd589d9021ae5644bbbf81dbe8c16283, type: 2}
+  unitStats:
+    isBomber: 0
   _unitComponents:
     _agent: {fileID: 7829978999161642135}
     _rb: {fileID: 7346357019272707260}
     _transform: {fileID: 1730683914939477301}
     _colliderRange: {fileID: 4383011321932814801}
     _animator: {fileID: 2621007048802014630}
+    _bomb: {fileID: 0}
     _enemyMask:
       serializedVersion: 2
       m_Bits: 0
@@ -1280,6 +1283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 922434100467198102}
+  colorFill: {fileID: 816759864918247612}
 --- !u!54 &7346357019272707260
 Rigidbody:
   m_ObjectHideFlags: 0

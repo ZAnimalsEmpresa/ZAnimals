@@ -2108,6 +2108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 7063320502988196197}
+  colorFill: {fileID: 130465639350024716}
 --- !u!54 &7230016053867562012
 Rigidbody:
   m_ObjectHideFlags: 0

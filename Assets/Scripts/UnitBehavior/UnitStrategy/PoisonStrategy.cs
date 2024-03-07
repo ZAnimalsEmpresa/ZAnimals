@@ -11,7 +11,7 @@ public class PoisonStrategy : IUnitStrategy
     private float _lastAttackTime;
     private float _attackCooldown;
 
-    public PoisonStrategy(GameObject currentUnit, GameObject enemy, float attackCooldown)
+    public PoisonStrategy(GameObject currentUnit, GameObject enemy)
     {
         _currentUnit = currentUnit;
         _enemyHealthController = enemy.GetComponent<UnitScript>().healthController; // Obtener el HealthController del enemigo
@@ -31,15 +31,6 @@ public class PoisonStrategy : IUnitStrategy
 
     public void PoisonAttack()
     {
-        float currentTime = Time.time;
-
-        float timeSinceLastAttack = currentTime - _lastAttackTime;
-
-        if (timeSinceLastAttack >= _attackCooldown)
-        {
-            _enemyHealthController.Poisoned();
-            _healthBarScript.IsPoisoned();
-            _lastAttackTime = Time.time;
-        }
+     _enemyHealthController.IsPoisoned = true;
     }
 }

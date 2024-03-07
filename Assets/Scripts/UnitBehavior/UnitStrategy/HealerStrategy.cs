@@ -5,14 +5,14 @@ public class HealthStrategy : IUnitStrategy
 {
     private HealthController _enemyHealthController;
 
-    public HealthStrategy(GameObject currentUnit, GameObject enemy, float attackCooldown)
+    public HealthStrategy(GameObject currentUnit, GameObject enemy)
     {
         _enemyHealthController = enemy.GetComponent<HealthController>(); // Obtener el HealthController del enemigo
     }
 
     public void Execute()
     {
-        DealDamage();
+        PoisonHealth();
     }
 
     public string GetNameStrategy()
@@ -20,12 +20,8 @@ public class HealthStrategy : IUnitStrategy
         return "HealthStrategy";
     }
 
-    private void DealDamage()
+    public void PoisonHealth()
     {
-        //if (_enemyHealthController == true)
-        //{
-        //   // Curar cada vez que golpea
-        //    _enemyHealthController.isPoisoned = false;
-        //}
+        _enemyHealthController.IsPoisoned = false;
     }
 }
