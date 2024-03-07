@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: dc4e5ef24215a9c4691f125cfa4752f7
+guid: f01ff17cbef4da44a8d72ec955fae769
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Medio Aliado
-    second: {fileID: 2100000, guid: 1ffbdd6488cd12248bd1f6f1c22be295, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -70,8 +65,8 @@ ModelImporter:
       name: Medium Ally Walk
       takeName: Medium Ally Walk
       internalID: 2733259276304556270
-      firstFrame: 1
-      lastFrame: 27.100002
+      firstFrame: 0
+      lastFrame: 28
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -99,7 +94,7 @@ ModelImporter:
       name: Medium Ally Death
       takeName: Medium Ally Death
       internalID: -7107203623864664280
-      firstFrame: 1
+      firstFrame: 0
       lastFrame: 56
       wrapMode: 0
       orientationOffsetY: 0
@@ -120,7 +115,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.13017957
+      - time: 0.13619246
         functionName: PlayDeath
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -135,8 +130,8 @@ ModelImporter:
       name: Medium Ally Attack
       takeName: Medium Ally Attack
       internalID: 8043511653882111522
-      firstFrame: 1
-      lastFrame: 42
+      firstFrame: 0
+      lastFrame: 45
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -156,13 +151,42 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.53064513
+      - time: 0.50742674
         functionName: PlayAttackMelee
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.005|T-Pose
+      takeName: Armature.005|T-Pose
+      internalID: -5970954209412680892
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

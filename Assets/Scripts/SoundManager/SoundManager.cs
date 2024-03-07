@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour
     FMOD.Studio.Bus SFX;
 
     [SerializeField] private float _masterVolume = 1;
-    [SerializeField] private float _musicVolume = 0.3f;
+    [SerializeField] private float _musicVolume = 0.8f;
     [SerializeField] private float _sfxVolume = 0.4f;
 
     private void Awake()

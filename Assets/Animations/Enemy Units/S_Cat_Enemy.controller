@@ -45,7 +45,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -9158585138587408433, guid: 9a147491a53a35d4d981670472f03db8, type: 3}
+  m_Motion: {fileID: -9158585138587408433, guid: aa1965da67680df49bf29f48de91616f, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -93,19 +93,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isDead
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -139,7 +139,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -8312538846858333772, guid: 9a147491a53a35d4d981670472f03db8, type: 3}
+  m_Motion: {fileID: -8312538846858333772, guid: aa1965da67680df49bf29f48de91616f, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -192,7 +192,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -2392293701277802239, guid: 9a147491a53a35d4d981670472f03db8, type: 3}
+  m_Motion: {fileID: -2392293701277802239, guid: aa1965da67680df49bf29f48de91616f, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -220,7 +220,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -680037256002324431, guid: 9a147491a53a35d4d981670472f03db8, type: 3}
+  m_Motion: {fileID: -680037256002324431, guid: aa1965da67680df49bf29f48de91616f, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

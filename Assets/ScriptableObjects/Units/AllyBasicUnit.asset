@@ -21,7 +21,7 @@ MonoBehaviour:
   health: 50
   attack: 20
   poisonDamage: 0
-  rangeAttack: 2
+  rangeAttack: 4
   rateFire: 2
   speedMovement: 3
   description: 
