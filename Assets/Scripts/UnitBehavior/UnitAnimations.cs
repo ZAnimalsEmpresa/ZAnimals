@@ -25,6 +25,10 @@ public class UnitAnimations
                 _animator.SetBool("Walk", true);
                 break;
 
+            case "DeathStrategy":
+                _animator.SetBool("isDead", true);
+                break;
+
             /*case "SpawnStrategy":
                 if (_animator.GetParameter(1).name == "Spawn")
                 {

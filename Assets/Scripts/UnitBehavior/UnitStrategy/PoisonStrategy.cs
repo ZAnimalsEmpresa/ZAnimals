@@ -4,15 +4,33 @@ using UnityEngine;
 public class PoisonStrategy : IUnitStrategy
 {
     private HealthController _enemyHealthController;
+    private GameObject _currentUnit;
+    private GameObject _enemy;
+    private float _attackValue;
+    private float _lastAttackTime;
+    private float _attackCooldown;
 
     public PoisonStrategy(GameObject currentUnit, GameObject enemy, float attackCooldown)
     {
-        _enemyHealthController = enemy.GetComponent<HealthController>(); // Obtener el HealthController del enemigo
+        _currentUnit = currentUnit;
+        _enemyHealthController = enemy.GetComponent<UnitScript>().healthController; // Obtener el HealthController del enemigo
+        _attackCooldown = enemy.GetComponent<UnitScript>().unitStats.RateFire;
+        _lastAttackTime = Time.time - _attackCooldown; // Initialise to allow first attack
     }
 
     public void Execute()
     {
-        DealDamage();
+        float currentTime = Time.time;
+
+        // Calculate time elapsed since last attack
+        float timeSinceLastAttack = currentTime - _lastAttackTime;
+
+        if (timeSinceLastAttack >= _attackCooldown)
+        {
+            // Carry out attack only if sufficient time has passed since last attack.
+            DealDamage();
+            _lastAttackTime = Time.time;
+        }
     }
 
     public string GetNameStrategy()
@@ -25,7 +43,7 @@ public class PoisonStrategy : IUnitStrategy
         if (_enemyHealthController != null)
         {
            // Envenenar al enemigo cada vez que se le golpea
-            _enemyHealthController.isPoisoned = true;
+            _enemyHealthController.IsPoisoned = true;
         }
     }
 }

@@ -18,9 +18,8 @@ public class OptionsVolumeManager : MonoBehaviour
         Master = FMODUnity.RuntimeManager.GetBus("bus:/");
         Music = FMODUnity.RuntimeManager.GetBus("bus:/Music");
         SFX = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
-        masterSlider.value = 1;
-        musicSlider.value = 1;
-        sfxSlider.value = 1;
+
+        LoadVolume();
     }
 
     public void ChangeVolume()
@@ -28,37 +27,52 @@ public class OptionsVolumeManager : MonoBehaviour
         Master.setVolume(masterSlider.value);
         Music.setVolume(musicSlider.value);
         SFX.setVolume(sfxSlider.value);
-        //Save();
+        //SaveVolume();
     }
-
-    /*
-    private void Start()
+    
+    private void LoadVolume()
     {
-        if (!PlayerPrefs.HasKey("MasterVolume") || !PlayerPrefs.HasKey("MusicVolume") || !PlayerPrefs.HasKey("SFXVolume"))
+        masterSlider.value = 1;
+        musicSlider.value = 0.3f;
+        sfxSlider.value = 0.4f;
+
+        /*if (!PlayerPrefs.HasKey("MasterVolume"))
         {
-            PlayerPrefs.SetFloat("MasterVolume",1);
+            PlayerPrefs.SetFloat("MasterVolume", 1);
+        }
+        else if (!PlayerPrefs.HasKey("MusicVolume"))
+        {
             PlayerPrefs.SetFloat("MusicVolume", 1);
-            PlayerPrefs.SetFloat("SFXVolume", 1);
-            Load();
         }
-        else
+        else if (!PlayerPrefs.HasKey("SFXVolume"))
         {
-            Load();
-        }
-    }*/
+            PlayerPrefs.SetFloat("SFXVolume", 1);
+        }*/
 
-    /*
-    private void Load()
-    {
+        /*Debug.Log("entra load");
         masterSlider.value = PlayerPrefs.GetFloat("MasterVolume");
+        Debug.Log("master volume Pprefs " + PlayerPrefs.GetFloat("MasterVolume"));
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        Debug.Log("music volume Pprefs " + PlayerPrefs.GetFloat("MusicVolume"));
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+        Debug.Log("sfx volume Pprefs " + PlayerPrefs.GetFloat("SFXVolume"));*/
     }
 
-    private void Save()
+    /*
+    private void SaveVolume()
     {
+        Debug.Log("entra save");
+
         PlayerPrefs.SetFloat("MasterVolume", masterSlider.value);
+        Debug.Log("master slide value "+ masterSlider.value);
+        PlayerPrefs.Save();
+
         PlayerPrefs.SetFloat("MusicVolume", musicSlider.value);
+        Debug.Log("music slide value " + musicSlider.value);
+        PlayerPrefs.Save();
+
         PlayerPrefs.SetFloat("SFXVolume", sfxSlider.value);
+        Debug.Log("sfx slide value " + sfxSlider.value);
+        PlayerPrefs.Save();
     }*/
 }
