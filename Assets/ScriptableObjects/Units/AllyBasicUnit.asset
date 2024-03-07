@@ -19,9 +19,9 @@ MonoBehaviour:
   cost: 100
   reward: 0
   health: 50
-  attack: 20
+  attack: 10
   poisonDamage: 0
-  rangeAttack: 2
+  rangeAttack: 5
   rateFire: 2
   speedMovement: 3
   description: 

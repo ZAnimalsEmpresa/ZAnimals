@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 91f9a6bc7620d6d4c81caf3731632165
+guid: b9379d8883a92274eaabdbc51d2df849
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Jefe Jirafa
-    second: {fileID: 2100000, guid: 2fcfa339ad8ff2a4fb5771a3d348db5d, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -29,7 +24,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -70,7 +65,7 @@ ModelImporter:
       name: Boss Enemy Walk
       takeName: Boss Enemy Walk
       internalID: 4047114479785891451
-      firstFrame: 1
+      firstFrame: 0
       lastFrame: 51
       wrapMode: 0
       orientationOffsetY: 0
@@ -91,14 +86,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.26870966
+      - time: 0.2965026
         functionName: PlayFootSteps
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.7790322
+      - time: 0.78069943
         functionName: PlayFootSteps
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -113,7 +108,7 @@ ModelImporter:
       name: Boss Enemy Start
       takeName: Boss Enemy Start
       internalID: 1638437852662125428
-      firstFrame: 1
+      firstFrame: 0
       lastFrame: 220
       wrapMode: 0
       orientationOffsetY: 0
@@ -134,7 +129,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.3029032
+      - time: 0.31010363
         functionName: PlayGiraffeSpawn
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -149,7 +144,7 @@ ModelImporter:
       name: Boss Enemy Death
       takeName: Boss Enemy Death
       internalID: -2357066768697222713
-      firstFrame: 1
+      firstFrame: 0
       lastFrame: 106
       wrapMode: 0
       orientationOffsetY: 0
@@ -170,14 +165,14 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.09709676
+      - time: 0.14417097
         functionName: PlayDeath
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.7666317
+      - time: 0.8079015
         functionName: PlayGiraffeFall
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -192,8 +187,8 @@ ModelImporter:
       name: Boss Enemy Attack
       takeName: Boss Enemy Attack
       internalID: -6748490393016088268
-      firstFrame: 1
-      lastFrame: 127
+      firstFrame: 0
+      lastFrame: 131
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -213,13 +208,42 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.3093548
+      - time: 0.30738342
         functionName: PlayAttackMelee
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.004|T-Pose
+      takeName: Armature.004|T-Pose
+      internalID: 1782717508027446070
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -291,7 +315,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

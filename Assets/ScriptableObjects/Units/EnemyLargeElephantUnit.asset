@@ -18,8 +18,9 @@ MonoBehaviour:
   unitAttackType: 0
   cost: 0
   reward: 500
-  life: 1000
+  health: 1000
   attack: 100
+  poisonDamage: 0
   rangeAttack: 1
   rateFire: 2
   speedMovement: 1
