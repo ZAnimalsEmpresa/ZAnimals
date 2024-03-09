@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78cbb0a5bf068894a8a7b5c7fd6db079, type: 3}
-  m_Name: EnemyBasicUnit
+  m_Name: EnemyBasicBomberUnit
   m_EditorClassIdentifier: 
   unitSize: 0
   unitFaction: 1
@@ -23,5 +23,5 @@ MonoBehaviour:
   poisonDamage: 0
   rangeAttack: 1
   rateFire: 1
-  speedMovement: 1
+  speedMovement: 3
   description: 

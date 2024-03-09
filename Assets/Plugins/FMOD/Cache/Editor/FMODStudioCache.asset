@@ -1,29 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8050751006195984431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Explosion/Size
-  m_EditorClassIdentifier: 
-  Name: Size
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 4103463660
-    data2: 3635086271
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-7109277720238452253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,10 +138,10 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638445463815779870
+  lastModified: 638455968260993566
   FileSizes:
   - Name: 
-    Value: 2260
+    Value: 2312
   Exists: 1
 --- !u!114 &-3619578485576428838
 MonoBehaviour:
@@ -314,7 +290,7 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638448217167156573
+  lastModified: 638455968266995192
   FileSizes: []
   Exists: 1
 --- !u!114 &-1263012547043775324
@@ -442,13 +418,14 @@ MonoBehaviour:
   - {fileID: 747884929144104374}
   - {fileID: 233992482758931475}
   - {fileID: 2209280893432999047}
+  - {fileID: 2651944682746274850}
   EditorParameters:
   - {fileID: -5092289529236735507}
   MasterBanks:
   - {fileID: 730398499840319073}
   StringsBanks:
   - {fileID: -4204760457379695234}
-  cacheTime: 638448217167156573
+  cacheTime: 638455968266995192
   cacheVersion: 131616
 --- !u!114 &233992482758931475
 MonoBehaviour:
@@ -492,7 +469,7 @@ MonoBehaviour:
   Path: FMODAssets/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638445463815709926
+  lastModified: 638455968260923624
   FileSizes: []
   Exists: 1
 --- !u!114 &747884929144104374
@@ -630,6 +607,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1182
+--- !u!114 &2651944682746274850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Explosion_Parameter
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Explosion_Parameter
+  Guid:
+    Data1: 285970072
+    Data2: 1277504148
+    Data3: -1205297233
+    Data4: 601745158
+  Banks:
+  - {fileID: -1529809094448071748}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3135107602647027091}
+  MinDistance: 1
+  MaxDistance: 100
+  Length: 0
 --- !u!114 &2963969047615147138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +662,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 54019
+--- !u!114 &3135107602647027091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Explosion_Parameter/Size
+  m_EditorClassIdentifier: 
+  Name: Size
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4103463660
+    data2: 3635086271
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3571068947050990959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,20 +700,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Weapons/Explosion
   Guid:
-    Data1: 285970072
-    Data2: 1277504148
-    Data3: -1205297233
-    Data4: 601745158
+    Data1: 1499061635
+    Data2: 1167646874
+    Data3: 198871730
+    Data4: -365193572
   Banks:
   - {fileID: -1529809094448071748}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
-  Parameters:
-  - {fileID: -8050751006195984431}
+  Parameters: []
   MinDistance: 1
-  MaxDistance: 100
-  Length: 0
+  MaxDistance: 20
+  Length: 991
 --- !u!114 &3622779189134914196
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78cbb0a5bf068894a8a7b5c7fd6db079, type: 3}
-  m_Name: EnemyBasicUnit
+  m_Name: AllyBasicBomberUnit
   m_EditorClassIdentifier: 
   unitSize: 0
-  unitFaction: 1
+  unitFaction: 0
   unitSpecialSkill: 0
-  unitAttackType: 0
-  cost: 0
-  reward: 50
+  unitAttackType: 1
+  cost: 100
+  reward: 0
   health: 50
   attack: 10
   poisonDamage: 0
-  rangeAttack: 1
-  rateFire: 1
-  speedMovement: 1
+  rangeAttack: 5
+  rateFire: 2
+  speedMovement: 3
   description: 

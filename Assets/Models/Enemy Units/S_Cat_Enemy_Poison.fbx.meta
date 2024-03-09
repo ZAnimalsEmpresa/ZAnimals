@@ -3,7 +3,12 @@ guid: 251c2a73fcc76874d85c959d7c7640c9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mini Enemigo
+    second: {fileID: 2100000, guid: 379afef8c5ffcd34fbb66dd0a4e8f185, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -73,7 +78,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -116,7 +121,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -166,7 +171,7 @@ ModelImporter:
       curves: []
       events:
       - time: 0.35634714
-        functionName: PlayAttackMelee
+        functionName: PlayPoison
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

@@ -86,7 +86,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mini Ally Point Walk
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5018222419490561253}
@@ -220,13 +220,13 @@ AnimatorStateMachine:
     m_Position: {x: 650, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6012493888771229326}
-    m_Position: {x: -10, y: 180, z: 0}
+    m_Position: {x: 30, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3075500338904257603}
     m_Position: {x: 640, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6976791304422827203}
-    m_Position: {x: 550, y: 180, z: 0}
+    m_Position: {x: 580, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1363967581932758520}
     m_Position: {x: 300, y: 30, z: 0}
@@ -303,7 +303,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mini Ally Attack
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7231632517172715449}
