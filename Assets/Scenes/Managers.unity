@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _masterVolume: 1
-  _musicVolume: 0.3
+  _musicVolume: 0.7
   _sfxVolume: 0.4
 --- !u!1 &825154099
 GameObject:

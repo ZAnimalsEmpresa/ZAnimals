@@ -33,7 +33,7 @@ public class OptionsVolumeManager : MonoBehaviour
     private void LoadVolume()
     {
         masterSlider.value = 1;
-        musicSlider.value = 0.8f;
+        musicSlider.value = 0.7f;
         sfxSlider.value = 0.4f;
 
         /*if (!PlayerPrefs.HasKey("MasterVolume"))
