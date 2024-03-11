@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c80122d68e3e2d489983fe72a613c20, type: 3}
-  m_Name: GameOver
+  m_Script: {fileID: 11500000, guid: 0f8315bfadbeaea43b11d05eef495fbc, type: 3}
+  m_Name: AllyMainBase
   m_EditorClassIdentifier: 
-  stateName: Game Over
+  baseType: 0
+  baseHP: 10000

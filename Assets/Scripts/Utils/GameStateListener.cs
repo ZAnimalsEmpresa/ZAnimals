@@ -19,6 +19,7 @@ public class GameStateListener : MonoBehaviour
     public UnityEvent onLoadingState;
     public UnityEvent onPlayingState;
     public UnityEvent onPauseState;
+    public UnityEvent onGameOverState;
 
     private void OnEnable()
     {
@@ -65,5 +66,8 @@ public class GameStateListener : MonoBehaviour
 
         if (newGameState.stateName == "Paused" && this.onPauseState != null)
             this.onPauseState.Invoke();
+
+        if (newGameState.stateName == "Game Over" && this.onGameOverState != null)
+            this.onGameOverState.Invoke();
     }
 }
