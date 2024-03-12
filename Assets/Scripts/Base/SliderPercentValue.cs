@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SliderPercentValue : MonoBehaviour
+{
+    [SerializeField] private Slider _slider;
+    [SerializeField] private TextMeshProUGUI _sliderText;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        _slider.onValueChanged.AddListener((v) =>
+        {
+            //_sliderText.text = Mathf.RoundToInt(v/(_slider.maxValue/100)) + "%";
+            _sliderText.text = Mathf.RoundToInt((Mathf.InverseLerp(_slider.minValue, _slider.maxValue, v)) * 100) + "%";
+        });
+    }
+}

@@ -20,6 +20,11 @@ public class UnitAnimations
                 _animator.SetBool("Attack", true);
                 break;
 
+            case "AttackBaseStrategy":
+                _animator.SetBool("Walk", false);
+                _animator.SetBool("Attack", true);
+                break;
+
             case "MoveStrategy":
                 _animator.SetBool("Attack", false);
                 _animator.SetBool("Walk", true);
