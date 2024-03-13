@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _masterVolume: 1
-  _musicVolume: 0.7
+  _musicVolume: 0.5
   _sfxVolume: 0.4
 --- !u!1 &825154099
 GameObject:
@@ -425,6 +425,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _debugValue:
+    scene: {fileID: 0}
+    loadingScreen: 0
 --- !u!114 &861168336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,6 +472,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _debugValue:
+    scene: {fileID: 0}
+    loadingScreen: 0
 --- !u!114 &861168337
 MonoBehaviour:
   m_ObjectHideFlags: 0
