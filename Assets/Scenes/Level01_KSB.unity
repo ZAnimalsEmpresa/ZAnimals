@@ -2282,6 +2282,38 @@ PrefabInstance:
       propertyPath: sceneDependencies.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: dbf722785abedcd4ebd8c7621cf2bdd6, type: 2}
+    - target: {fileID: 6757667382852159474, guid: ae0af61835e4156428fc423794bb874b, type: 3}
+      propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757667382852159474, guid: ae0af61835e4156428fc423794bb874b, type: 3}
+      propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757667382852159474, guid: ae0af61835e4156428fc423794bb874b, type: 3}
+      propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757667382852159474, guid: ae0af61835e4156428fc423794bb874b, type: 3}
+      propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757667382852159474, guid: ae0af61835e4156428fc423794bb874b, type: 3}
+      propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PlayMusicEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757667382852159474, guid: ae0af61835e4156428fc423794bb874b, type: 3}
+      propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: LevelMusicManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757667382852159474, guid: ae0af61835e4156428fc423794bb874b, type: 3}
+      propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757667382852159474, guid: ae0af61835e4156428fc423794bb874b, type: 3}
+      propertyPath: onDependenciesLoaded.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8230039905646537235, guid: ae0af61835e4156428fc423794bb874b, type: 3}
       propertyPath: gameManager
       value: 
@@ -6164,15 +6196,15 @@ PrefabInstance:
     - target: {fileID: 2495175625496252735, guid: e08c92ab7bf5aff4caab37daf01f0828, type: 3}
       propertyPath: enemyPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 5612200374440547900, guid: 7ee3a437511d3cd48976e9d8c8865508, type: 3}
+      objectReference: {fileID: 5612200374440547900, guid: 09056aab9fc40444eb4a598bbacfbad0, type: 3}
     - target: {fileID: 2495175625496252735, guid: e08c92ab7bf5aff4caab37daf01f0828, type: 3}
       propertyPath: enemyPrefabs.Array.data[3]
       value: 
-      objectReference: {fileID: 5612200374440547900, guid: 7ee3a437511d3cd48976e9d8c8865508, type: 3}
+      objectReference: {fileID: 5612200374440547900, guid: e9e6ad30f1ad89444a7c2c1d0aa0f51d, type: 3}
     - target: {fileID: 2495175625496252735, guid: e08c92ab7bf5aff4caab37daf01f0828, type: 3}
       propertyPath: enemyPrefabs.Array.data[4]
       value: 
-      objectReference: {fileID: 5612200374440547900, guid: 7ee3a437511d3cd48976e9d8c8865508, type: 3}
+      objectReference: {fileID: 5612200374440547900, guid: 75407267892e665438f9688cefa02b9d, type: 3}
     - target: {fileID: 3299049027756274778, guid: e08c92ab7bf5aff4caab37daf01f0828, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -21679,69 +21711,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2687915887037769234, guid: e071ba8647fb5ac47afb16c2285e7665, type: 3}
   m_PrefabInstance: {fileID: 1264555484}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1276728325
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1276728327}
-  - component: {fileID: 1276728326}
-  m_Layer: 0
-  m_Name: LevelSound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1276728326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276728325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -105659737
-      Data2: 1282431426
-      Data3: 1309519536
-      Data4: 488360128
-    Path: event:/Music/Demo Level
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!4 &1276728327
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276728325}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.03, y: 0, z: -10.41}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1283136770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36083,7 +36052,6 @@ SceneRoots:
   - {fileID: 4840055072761569070}
   - {fileID: 1569010796}
   - {fileID: 1232604330}
-  - {fileID: 1276728327}
   - {fileID: 1666269435}
   - {fileID: 399744180}
   - {fileID: 99448942202502502}
