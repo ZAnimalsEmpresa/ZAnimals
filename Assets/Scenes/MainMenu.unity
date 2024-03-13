@@ -4353,7 +4353,7 @@ MonoBehaviour:
   sceneToLoad: {fileID: 11400000, guid: 7440d5059d14fcb418a80d4158a4b34f, type: 2}
   currentScene: {fileID: 0}
   levelEntrance: {fileID: 0}
-  loadingScreen: 0
+  loadingScreen: 1
   playerPath: {fileID: 11400000, guid: b40d75be8e59d8141b29af4182f59def, type: 2}
   loadSceneEvent: {fileID: 11400000, guid: 2f676c0fc2c3dc141932bc992b0a3ed0, type: 2}
 --- !u!114 &1057503002
