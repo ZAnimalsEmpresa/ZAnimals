@@ -6205,6 +6205,10 @@ PrefabInstance:
       propertyPath: enemyPrefabs.Array.data[4]
       value: 
       objectReference: {fileID: 5612200374440547900, guid: 75407267892e665438f9688cefa02b9d, type: 3}
+    - target: {fileID: 2515317551027118816, guid: e08c92ab7bf5aff4caab37daf01f0828, type: 3}
+      propertyPath: timeBetweenWaves
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3299049027756274778, guid: e08c92ab7bf5aff4caab37daf01f0828, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -35856,6 +35860,14 @@ PrefabInstance:
     - target: {fileID: 3572652373341233640, guid: 56f848a15cb15614c9854df1b9b12660, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035458396991655646, guid: 56f848a15cb15614c9854df1b9b12660, type: 3}
+      propertyPath: m_Value
+      value: 50000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035458396991655646, guid: 56f848a15cb15614c9854df1b9b12660, type: 3}
+      propertyPath: m_MaxValue
+      value: 50000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
