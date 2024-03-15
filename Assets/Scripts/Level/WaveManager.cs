@@ -5,8 +5,8 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     public EnemyRandomFactory enemyFactory; // Reference to EnemyRandomFactory
-    public float timeBetweenWaves = 5f; 
-    public int numberOfWaves = 3; 
+    public float timeBetweenWaves = 15f; 
+    public int numberOfWaves = 5; 
     public int enemiesPerWave = 5;
     public Transform spawnPosition;
     public BoxCollider spawnSite;
@@ -16,13 +16,14 @@ public class WaveManager : MonoBehaviour
     private void Start()
     {
         _spawnCubeSize = spawnSite.size;
+        SpawnEnemies(enemiesPerWave);
         // Start wave generation
         StartCoroutine(SpawnWaves());
     }
 
     private IEnumerator SpawnWaves()
     {
-        for (int wave = 0; wave < numberOfWaves; wave++)
+        for (int wave = 1; wave < numberOfWaves; wave++)
         {
             // Wait before starting the next wave
             yield return new WaitForSeconds(timeBetweenWaves);

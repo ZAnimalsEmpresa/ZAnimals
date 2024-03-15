@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AllyMainBase
   m_EditorClassIdentifier: 
   baseType: 0
-  baseHP: 10000
+  baseHP: 50000

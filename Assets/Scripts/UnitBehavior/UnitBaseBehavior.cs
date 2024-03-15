@@ -72,7 +72,7 @@ public class UnitBaseBehavior
                 enemyHealthController.OnUnitDeath += OnEnemyDeath;
             }
         }
-        else if (other.gameObject.tag == "AllyBase" && _targetUnit == null)
+        else if (other.gameObject.tag == "AllyBase" && _unitScript.unitStats.UnitFaction== UnitFaction.Enemy && _targetUnit == null)
         {
             _targetUnit = other;
             _unitContext.SetStrategy(new AttackBaseStrategy(_unitScript.gameObject, _targetUnit));
@@ -104,7 +104,7 @@ public class UnitBaseBehavior
                 enemyHealthController.OnUnitDeath -= OnEnemyDeath;
             }
         }
-        else if (other.gameObject.tag == "AllyBase" && other.gameObject == _targetUnit)
+        else if (other.gameObject.tag == "AllyBase" && _unitScript.unitStats.UnitFaction == UnitFaction.Enemy && other.gameObject == _targetUnit)
         {
             _targetUnit = null;
             _unitContext.StopCurrentStrategy(_agent, false);
